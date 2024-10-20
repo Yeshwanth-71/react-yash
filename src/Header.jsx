@@ -5,8 +5,8 @@ import { Container } from "react-bootstrap";
 
 function ContainerExample() {
   return (
-    <Container>
-        <ul>
+    <Container  style={{ backgroundColor: "black", color:"white", height:"100vh" }}>
+        <ul style={{listStyleType:"none"}}>
             <li>
               <Link to="/">  Home</Link>
                 </li>
