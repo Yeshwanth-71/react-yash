@@ -1,22 +1,57 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 function Signup() {
   return (
-    <div className='Signup container-fluid'>
-       <div className="card p-3" style={{ maxWidth: '500px', width: '100%', overflowY: 'hidden' }}>
-
-             <h1>Sign Up</h1><br /><br />
-             <input type="text" placeholder='Enter your name' /><br /><br />
-             <input type="email" placeholder='Enter your email' /><br /><br />
-             <input type="password" placeholder='Enter your password' /><br /><br />
-             <Link to={'/'}><button>Sign Up</button></Link><br /><br />
-             <input type="checkbox" id='new' />
-             <label id='new'>remember me</label>
+    <div className="Signup d-flex justify-content-center align-items-center vh-100">
+      <div className="card p-4" style={{ maxWidth: '400px', width: '100%', backgroundColor:"aqua" }}>
+        <h1 className="text-center mb-4">Sign Up</h1>
+        
+        <div className="form-group mb-3">
+          <input 
+            type="text" 
+            className="form-control" 
+            placeholder="Enter your name" 
+            required 
+          />
+        </div>
+        
+        <div className="form-group mb-3">
+          <input 
+            type="email" 
+            className="form-control" 
+            placeholder="Enter your email" 
+            required 
+          />
+        </div>
+        
+        <div className="form-group mb-3">
+          <input 
+            type="password" 
+            className="form-control" 
+            placeholder="Enter your password" 
+            required 
+          />
+        </div>
+        
+        <div className="form-check mb-3">
+          <input 
+            type="checkbox" 
+            className="form-check-input" 
+            id="rememberMe" 
+          />
+          <label className="form-check-label" htmlFor="rememberMe">
+            Remember me
+          </label>
+        </div>
+        
+        <Link to={'/'}>
+          <button className="btn btn-primary w-100">Sign Up</button>
+        </Link>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default Signup
+export default Signup;
