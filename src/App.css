@@ -1,6 +1,11 @@
 .Login{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
 }
 .Signup{
   text-align: center;
@@ -13,4 +18,11 @@
 }
 .Signup input{
   border-bottom: 2px solid black;
+}
+.sidenav{
+  height: 100vh;
+}
+/* src/App.css */
+.navbar {
+  margin-bottom: 20px; /* Space below the navbar */
 }
