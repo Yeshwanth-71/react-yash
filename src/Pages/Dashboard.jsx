@@ -7,10 +7,10 @@ function Dashboard() {
   return (
     <div className='container-fluid'>
         <Row>
-            <Col sm={2}>
+            <Col sm={3}>
                 <Sidenav />
             </Col>
-            <Col sm={10}>
+            <Col sm={9}>
             <Header/>
                 <h1>Dashboard</h1>
             </Col>

@@ -19,10 +19,94 @@
 .Signup input{
   border-bottom: 2px solid black;
 }
-.sidenav{
-  height: 100vh;
-}
 /* src/App.css */
 .navbar {
   margin-bottom: 20px; /* Space below the navbar */
+  position: fixed;
 }
+.sidenav {
+  width: 250px; /* Adjust width as necessary */
+  height: 100vh; /* Full height */
+  position: fixed; /* Fix the sidenav */
+  left: 0; /* Align to the left */
+  top: 0; /* Align to the top */
+  overflow-y: auto; /* Scroll if content exceeds height */
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+}
+
+.nav-items {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  flex: 1; /* Take up all remaining space */
+  margin: 0; /* Remove default margin */
+}
+
+.nav-items li {
+  padding: 10px; /* Add padding to items */
+}
+
+.sidenav-heading {
+  margin: 10px; /* Add margin around headings */
+  text-align: center;
+}
+
+.logout-heading {
+  margin-top: auto; /* Push to the bottom of the sidenav */
+  padding: 10px; /* Add padding for better spacing */
+}
+
+.content-col {
+  padding: 10px; /* Adjust padding to reduce gap */
+}
+
+.content-area {
+  margin-top: -10px; /* Negative margin to pull content up */
+}
+
+.dashboard-title {
+  margin-top: 10px; /* Adjust margin to reduce space above title */
+  font-size: 2.5rem; /* Increase the font size */
+  color: #495057; /* Adjust color for better contrast */
+}
+
+
+.nav-items {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-items li {
+  margin-bottom: 1rem; /* Space between menu items */
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center align icons and text */
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #fff;
+  display: flex; /* Keep icon and text in a row */
+  align-items: center;
+  width: 100%; /* Ensure the entire width is clickable */
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-items li a:hover {
+  background-color: #495057; /* Background color on hover */
+}
+
+.nav-items li a svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.active {
+  font-weight: bold;
+}
+.nav-dropdown-gap {
+  margin-right: 40px; /* Adjust as needed */
+}
+
+
+
