@@ -8,10 +8,10 @@ function Error() {
   return (
     <div className='container-fluid'>
         <Row>
-            <Col sm={3}>
+            <Col sm={2}>
                 <Sidenav />
             </Col>
-            <Col sm={9}>
+            <Col sm={10}>
             <Header/>
                 <h1>404 - Page Not Found</h1>
             </Col>

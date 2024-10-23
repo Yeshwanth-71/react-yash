@@ -16,6 +16,7 @@ import Login1 from './Pages/Login1';
 import Error from './Pages/Error';
 import { GitHub } from '@mui/icons-material';
 import Nodata from './Pages/Nodata';
+import Product from './Pages/Product';
 function App() {
   return (
     <div>
@@ -35,6 +36,7 @@ function App() {
           <Route path='/login1'  element={<Login1 />} />
           <Route path='/error'  element={<Error />} />
           <Route path='/github'  element={<GitHub />} />
+          <Route path='/product'  element={<Product />} />
           <Route path='/*'  element={<Nodata />} />
         </Routes>
       </Router>

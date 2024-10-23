@@ -8,10 +8,10 @@ function Styles() {
   return (
     <div className='container-fluid'>
         <Row>
-            <Col sm={3}>
+            <Col sm={2}>
                 <Sidenav />
             </Col>
-            <Col sm={9}>
+            <Col sm={10}>
             <Header/>
                 <h1>Styles</h1>
             </Col>

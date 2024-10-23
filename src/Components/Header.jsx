@@ -61,7 +61,7 @@ function MyNavbar() {
           {/* GitHub Icon on the right side */}
           <Nav className="ml-auto"> {/* Ensures GitHub icon aligns to the right */}
             <Nav.Link href="https://github.com/" target="_blank" className="text-light">
-              <FaGithub size={20} /> {/* Adjust size as necessary */}
+            <FaGithub size={20} /> {/* Adjust size as necessary */}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

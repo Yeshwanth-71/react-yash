@@ -103,6 +103,7 @@
 
 .active {
   font-weight: bold;
+  text-align: center;
 }
 .nav-dropdown-gap {
   margin-right: 40px; /* Adjust as needed */
@@ -111,6 +112,4 @@
   text-align: center;
   margin-top: 100px;
 }
-
-
 

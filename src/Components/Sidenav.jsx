@@ -64,6 +64,11 @@ function Sidenav() {
             <MdError /> Error
           </NavLink>
         </li>
+        <li>
+          <NavLink to='/product' className={({ isActive }) => (isActive ? 'active' : '')}>
+            <MdError /> Product
+          </NavLink>
+        </li>
         <li onClick={toggleDropdown} className="dropdown">
           <span>
             <RxDropdownMenu /> Dropdown
