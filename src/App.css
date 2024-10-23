@@ -112,4 +112,53 @@
   text-align: center;
   margin-top: 100px;
 }
+/* Layout for fixed sidebar */
+.main-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  padding: 20px;
+  overflow-y: auto; /* Sidebar should scroll if its content overflows */
+}
+
+/* Layout for fixed sidebar */
+.main-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  padding: 20px;
+  overflow-y: auto; /* Sidebar should scroll if its content overflows */
+}
+
+.main-content {
+  margin: 20px;
+  margin-left: 250px; /* Adjust for sidebar width */
+  width: calc(100% - 250px); /* Take up remaining width */
+  padding: 20px;
+  overflow-y: auto;
+  margin-top: 20px; /* Add gap between sidenav and header */
+}
+
+/* To ensure the main content also scrolls if too long */
+.container-fluid {
+  height: 100%;
+}
+
+
 

@@ -10,11 +10,11 @@ function MyNavbar() {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         {/* Left side: Search Bar */}
-        <Form inline className="mr-auto">
+        <Form className="d-flex mr-auto">
           <FormControl
             type="text"
             placeholder="Search"
-            className="mr-sm-2"
+            className="me-2" // Bootstrap utility for margin
             style={{ width: '200px' }} // Adjust width as necessary
           />
         </Form>
@@ -36,7 +36,7 @@ function MyNavbar() {
             </Dropdown>
 
             {/* Dropdown for Yeshwanth */}
-            <Dropdown className="ml-3"> {/* Add margin-left for spacing */}
+            <Dropdown className="ms-3"> {/* Use Bootstrap's margin-start utility for spacing */}
               <Dropdown.Toggle variant="secondary" id="yeshwanth-dropdown">
                 Yeshwanth
               </Dropdown.Toggle>
@@ -58,10 +58,13 @@ function MyNavbar() {
             </Dropdown>
           </Nav>
 
-          {/* GitHub Icon on the right side */}
-          <Nav className="ml-auto"> {/* Ensures GitHub icon aligns to the right */}
+          {/* GitHub Icon and Logout Icon on the right side */}
+          <Nav className="ml-auto"> {/* Ensures icons align to the right */}
             <Nav.Link href="https://github.com/" target="_blank" className="text-light">
-            <FaGithub size={20} /> {/* Adjust size as necessary */}
+              <FaGithub size={20} /> {/* Adjust size as necessary */}
+            </Nav.Link>
+            <Nav.Link as={Link} to="/logout" className="text-light">
+              <FontAwesomeIcon icon={faSignOutAlt} size="lg" /> {/* Logout Icon */}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -1,94 +1,75 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDisplay, faTable, faUser, faPenToSquare, faPalette } from '@fortawesome/free-solid-svg-icons';
 import { CiLock } from "react-icons/ci";
 import { FaUikit, FaGithub } from "react-icons/fa";
-import { RxDropdownMenu } from "react-icons/rx";
-import { IoLogOutOutline } from "react-icons/io5";
 import { MdError } from "react-icons/md";
+import { Link } from 'react-router-dom'; // Change to react-router-dom Link
+import { DiResponsive } from "react-icons/di";
 
 function Sidenav() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
   return (
     <nav className='sidenav bg-dark text-light'>
-      <h2 className='sidenav-heading'>Menu</h2>
+      <h2 className='sidenav-heading bg-secondary'>Menu</h2>
       <ul className="nav-items">
         <li>
-          <NavLink to='/dashboard' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/dashboard'>
             <FontAwesomeIcon icon={faDisplay} /> Dashboard
           </NavLink>
         </li>
         <li>
-          <NavLink to='/tables' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/tables'>
             <FontAwesomeIcon icon={faTable} /> Tables
           </NavLink>
         </li>
         <li>
-          <NavLink to='/forms' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/forms'>
             <FontAwesomeIcon icon={faPenToSquare} /> Forms
           </NavLink>
         </li>
         <li>
-          <NavLink to='/ui' className={({ isActive }) => (isActive ? 'active' : '')}>
-            <FaUikit /> UI
+          <NavLink to='/ui'>
+          <FaUikit /> UI
           </NavLink>
         </li>
         <li>
-          <NavLink to='/responsive' className={({ isActive }) => (isActive ? 'active' : '')}>
-            <FontAwesomeIcon icon={faDisplay} /> Responsive
+          <NavLink to='/responsive'>
+          <DiResponsive />
+          Responsive
           </NavLink>
         </li>
         <li>
-          <NavLink to='/styles' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/styles'>
             <FontAwesomeIcon icon={faPalette} /> Styles
           </NavLink>
         </li>
         <li>
-          <NavLink to='/user' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/user'>
             <FontAwesomeIcon icon={faUser} /> User Profile
           </NavLink>
         </li>
         <li>
-          <NavLink to='/login1' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/login1'>
             <CiLock /> Login
           </NavLink>
         </li>
         <li>
-          <NavLink to='/error' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/error'>
             <MdError /> Error
           </NavLink>
         </li>
         <li>
-          <NavLink to='/product' className={({ isActive }) => (isActive ? 'active' : '')}>
-            <MdError /> Product
-          </NavLink>
-        </li>
-        <li onClick={toggleDropdown} className="dropdown">
-          <span>
-            <RxDropdownMenu /> Dropdown
-          </span>
-          {isDropdownOpen && (
-            <ul className="dropdown-menu">
-              <li><NavLink to="/dropdown/item1">Item 1</NavLink></li>
-              <li><NavLink to="/dropdown/item2">Item 2</NavLink></li>
-              <li><NavLink to="/dropdown/item3">Item 3</NavLink></li>
-            </ul>
-          )}
-        </li>
-        <li>
-          {/* Change from NavLink to anchor for external link */}
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="nav-link">
             <FaGithub /> GitHub
           </a>
         </li>
       </ul>
-      <h2 className='sidenav-heading logout-heading'><IoLogOutOutline /> Logout</h2>
+      <Link to='/logout'><center>
+        <button className='btn btn-primary btn-lg' aria-label="Logout">
+          Logout
+        </button></center>
+      </Link>
     </nav>
   );
 }

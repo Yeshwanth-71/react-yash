@@ -1,25 +1,22 @@
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import React from 'react'
-import Sidenav from '../Components/Sidenav'
-import Header from '../Components/Header'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Sidenav from '../Components/Sidenav';
+import Header from '../Components/Header';
 
-function Responsive() {
+function ContainerExample() {
   return (
-    <div className='container-fluid'>
-        <Row>
-            <Col sm={2}>
-                <Sidenav />
-            </Col>
-            <Col sm={10}>
-            <Header/>
-                <h1>Responsive</h1>
-            </Col>
-        </Row>
+    <Container>
+      <Row>
+        <Col sm={2}><Sidenav/></Col>
 
-        
-    </div>
-  )
+        <Col sm={10}>
+        <Header/>
+        <h1>Responsive</h1>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
-export default Responsive
+export default ContainerExample;
