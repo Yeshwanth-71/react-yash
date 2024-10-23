@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDisplay, faTable, faUser, faCog, faPenToSquare, faPalette } from '@fortawesome/free-solid-svg-icons';
+import { faDisplay, faTable, faUser, faPenToSquare, faPalette } from '@fortawesome/free-solid-svg-icons';
 import { CiLock } from "react-icons/ci";
 import { FaUikit, FaGithub } from "react-icons/fa";
 import { RxDropdownMenu } from "react-icons/rx";
@@ -55,7 +55,7 @@ function Sidenav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/login' className={({ isActive }) => (isActive ? 'active' : '')}>
+          <NavLink to='/login1' className={({ isActive }) => (isActive ? 'active' : '')}>
             <CiLock /> Login
           </NavLink>
         </li>
