@@ -1,20 +1,34 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faCog, faEnvelope, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faUser, faCog, faEnvelope, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Dropdown, Navbar, Nav, Form, FormControl, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { FaGithub } from 'react-icons/fa'; // Import GitHub icon
 
 function MyNavbar() {
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
+  // Function to go back to the previous page
+  const handleBackClick = () => {
+    navigate(-1); // Navigates to the previous page in history
+  };
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
+        {/* Left Arrow for Back Navigation */}
+        <Nav className="me-auto">
+          <Nav.Link onClick={handleBackClick} className="text-light">
+            <FontAwesomeIcon icon={faArrowLeft} size="lg" /> {/* Left Arrow Icon */}
+          </Nav.Link>
+        </Nav>
+
         {/* Left side: Search Bar */}
         <Form className="d-flex mr-auto">
           <FormControl
             type="text"
             placeholder="Search"
-            className="me-2" // Bootstrap utility for margin
+            className="me-2"
             style={{ width: '200px' }} // Adjust width as necessary
           />
         </Form>
@@ -36,7 +50,7 @@ function MyNavbar() {
             </Dropdown>
 
             {/* Dropdown for Yeshwanth */}
-            <Dropdown className="ms-3"> {/* Use Bootstrap's margin-start utility for spacing */}
+            <Dropdown className="ms-3">
               <Dropdown.Toggle variant="secondary" id="yeshwanth-dropdown">
                 Yeshwanth
               </Dropdown.Toggle>
@@ -59,9 +73,9 @@ function MyNavbar() {
           </Nav>
 
           {/* GitHub Icon and Logout Icon on the right side */}
-          <Nav className="ml-auto"> {/* Ensures icons align to the right */}
+          <Nav className="ml-auto">
             <Nav.Link href="https://github.com/" target="_blank" className="text-light">
-              <FaGithub size={20} /> {/* Adjust size as necessary */}
+              <FaGithub size={20} /> {/* GitHub Icon */}
             </Nav.Link>
             <Nav.Link as={Link} to="/logout" className="text-light">
               <FontAwesomeIcon icon={faSignOutAlt} size="lg" /> {/* Logout Icon */}

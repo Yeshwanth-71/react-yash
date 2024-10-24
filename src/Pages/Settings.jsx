@@ -1,23 +1,22 @@
-// src/Pages/Settings.js
-import React from 'react';
-import { Col, Row } from 'react-bootstrap'; // Make sure to import Row and Col from react-bootstrap
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Sidenav from '../Components/Sidenav';
-import Header from '../Components/Header'; // Corrected import statement
+import Header from '../Components/Header';
 
-function Settings() {
+function ContainerExample() {
   return (
-    <div className='Settings'>
+    <Container>
       <Row>
-        <Col sm={2}>
-          <Sidenav />
-        </Col>
+        <Col sm={2}><Sidenav/></Col>
+
         <Col sm={10}>
-          <Header />
-          <h2>Settings</h2> {/* Add a title or content here */}
+        <Header/>
+        <h1>Settings</h1>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 }
 
-export default Settings;
+export default ContainerExample;

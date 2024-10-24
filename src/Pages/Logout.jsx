@@ -1,11 +1,22 @@
-import React from 'react'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Sidenav from '../Components/Sidenav';
+import Header from '../Components/Header';
 
-function Logout() {
+function ContainerExample() {
   return (
-    <div className='Logout'>
-        <h1>Logout page</h1>
-    </div>
-  )
+    <Container>
+      <Row>
+        <Col sm={2}><Sidenav/></Col>
+
+        <Col sm={10}>
+        <Header/>
+        <h1>Logout</h1>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
-export default Logout
+export default ContainerExample;
