@@ -174,12 +174,40 @@
   padding: 20px;
   overflow-y: auto;
   margin-top: 20px; /* Add gap between sidenav and header */
+
 }
 
 /* To ensure the main content also scrolls if too long */
 .container-fluid {
   height: 100%;
 }
-
+.any{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.any img{
+  height: 500px;
+  width: 400px;
+}
+/* In your CSS file */
+.any1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.any1 img{
+  height: 700px;
+  width: 250px;
+}
+.any2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.any2 img{
+  height: 400px;
+  width: 400px;
+}
 
 

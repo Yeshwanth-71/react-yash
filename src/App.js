@@ -16,6 +16,7 @@ import Error from './Pages/Error';
 import Nodata from './Pages/Nodata';
 import Logout from './Pages/Logout'; // Renamed to avoid conflict
 
+
 function App() {
   return (
     <div>
@@ -34,6 +35,7 @@ function App() {
           <Route path='/error' element={<Error />} />
           <Route path='/logout' element={<Logout />} />
           <Route path='/*' element={<Nodata />} />
+          
          
         </Routes>
       </Router>

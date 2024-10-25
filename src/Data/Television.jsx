@@ -1,4 +1,4 @@
-export const Tv=[
+export const Television=[
     {
         id:1,
         ScreenSize:"55 Inches",
@@ -89,4 +89,4 @@ export const Tv=[
         images:"https://m.media-amazon.com/images/I/81OmhFfS-hL._AC_UY218_.jpg",
         price:43000,
     },
-]
+];

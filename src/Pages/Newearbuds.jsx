@@ -1,10 +1,10 @@
 import React from 'react';
-import { product1 } from './Data/Newmobile';
+import { productlist } from '../Data/Earbuds';
 
-function Mobile() {
+function Earbuds() {
     return (
-        <div>
-            {product1.map((item) => (
+        <div className='any'>
+            {productlist.map((item) => (
                 <div className='new1'>
                     <h2>{item.title}</h2>
                     <p>ID: {item.id}</p>  {/* Display the id */}
@@ -15,3 +15,4 @@ function Mobile() {
         </div>
     );
 }
+export default Earbuds;

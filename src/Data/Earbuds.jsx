@@ -1,4 +1,4 @@
-export const product1 = [
+export const productlist = [
     {
         id: 1,
         title: "noise",  
@@ -36,6 +36,17 @@ export const product1 = [
         price: 2500,
         img:"https://m.media-amazon.com/images/I/51raakZN9fL._AC_UL320_.jpg",
     },
+    {
+        id: 7,
+        title: "philips",  
+        price: 2200,
+        img:"https://m.media-amazon.com/images/I/51CkHr8YLML._AC_UL320_.jpg",
+    },
+    {
+        id: 8,
+        title: "mivi",  
+        price: 1800,
+        img:"https://m.media-amazon.com/images/I/71hDPfQHtKL._AC_UL320_.jpg",
+    },
 ];
 
-export default product1;

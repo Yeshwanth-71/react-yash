@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Sidenav from '../Components/Sidenav';
 import Header from '../Components/Header';
 import Newmobile from './Pages/Newmobile';
+import Newearbuds from './Pages/Newearbuds';
+
 import './ContainerExample.css'; // Optional: for layout-specific styling
 
 function ContainerExample() {
@@ -17,9 +19,11 @@ function ContainerExample() {
 
         <Col sm={10} className="main-content">
           <Header />
-          <div className="content-area">
+          <div className="content-area d-flex">
             <h1>Dashboard</h1>
+            <Newrefrigerator />
             <Newmobile />
+            <Newearbuds />
           </div>
         </Col>
       </Row>

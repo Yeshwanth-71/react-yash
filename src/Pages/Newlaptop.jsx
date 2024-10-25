@@ -1,15 +1,15 @@
 import React from 'react';
-import {productdata} from '../Data/Mobile'
+import {Laptop} from '../Data/Laptop'
 
 function Mobile() {
     return (
-        <div className='any'>
-            {productdata.map((item) => (
+        <div className="any">
+            {Laptop.map((item) => (
                 <div className='new'>
                     <h2>{item.title}</h2>
                     <p>ID: {item.id}</p>  {/* Display the id */}
-                    <p>Price: {item.price}</p>
-                    <img src={item.img} alt="" />
+                    <p>Price: {item.Price}</p>
+                    <img src={item.Image} alt="" />
                 </div>
             ))}
         </div>

@@ -13,8 +13,6 @@ function ContainerExample() {
         <Col sm={10}>
         <Header/>
         <h1>Dashboard</h1>
-        <Newmobile />
-        <Newearbuds/>
         </Col>
       </Row>
     </Container>

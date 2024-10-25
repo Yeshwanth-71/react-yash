@@ -8,7 +8,8 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
-        Image:"",
+        Price:30000,
+        Image:"https://m.media-amazon.com/images/I/61qlqvTsocL._AC_UY218_.jpg",
     },
     {
         id:2,
@@ -19,6 +20,7 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
+        Price:35000,
         Image:"https://m.media-amazon.com/images/I/71czGb00k5L._SX569_.jpg",
     },
     {
@@ -30,6 +32,7 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
+        Price:40000,
         Image:"https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg",
     },
     {
@@ -41,6 +44,7 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
+        Price:45000,
         Image:"https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg",
     },
     {
@@ -52,6 +56,7 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
+        Price:47000,
         Image:"https://m.media-amazon.com/images/I/61TIgpyjxPL._SX569_.jpg",
     },
     {
@@ -63,6 +68,7 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
+        Price:50000,
         Image:"https://m.media-amazon.com/images/I/71czGb00k5L._SX569_.jpg",
     },
     {
@@ -74,6 +80,7 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
+        Price:55000,
         Image:"https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg",
     },
     {
@@ -85,7 +92,7 @@ export const Laptop = [
         HardDiskSize:"512 GB",
         CPUModel:	"Intel Core i5",
         RAMMemoryInstalledSize:	"16 GB",
+        Price:52000,
         Image:"https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg",
     },
 ];
-export default Laptop;

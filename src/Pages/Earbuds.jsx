@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Sidenav from '../Components/Sidenav';
 import Header from '../Components/Header';
+import Newearbuds from '../Pages/Newearbuds'
 
 function ContainerExample() {
   return (
@@ -13,6 +14,7 @@ function ContainerExample() {
         <Col sm={10}>
         <Header/>
         <h1>Earbuds</h1>
+        <Newearbuds />
         </Col>
       </Row>
     </Container>
