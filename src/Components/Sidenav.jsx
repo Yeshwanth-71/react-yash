@@ -1,13 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDisplay, faTable, faUser, faPenToSquare, faPalette } from '@fortawesome/free-solid-svg-icons';
-import { CiLock } from "react-icons/ci";
-import { FaUikit, FaGithub } from "react-icons/fa";
+import { MdSpaceDashboard } from "react-icons/md";
+import {  FaMobileAlt, FaTv } from "react-icons/fa";
+import { IoMdLaptop } from "react-icons/io";
+import { BsEarbuds } from "react-icons/bs";
+import { CgSmartHomeRefrigerator } from "react-icons/cg";
+import {  FaGithub } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 import { Link } from 'react-router-dom'; // Change to react-router-dom Link
-import { DiResponsive } from "react-icons/di";
 import { IoMdSettings } from "react-icons/io";
+import { FaUser } from "react-icons/fa";
 
 function Sidenav() {
   return (
@@ -16,43 +18,38 @@ function Sidenav() {
       <ul className="nav-items">
         <li>
           <NavLink to='/dashboard'>
-            <FontAwesomeIcon icon={faDisplay} /> Dashboard
+          <MdSpaceDashboard />Dashboard
           </NavLink>
         </li>
         <li>
-          <NavLink to='/tables'>
-            <FontAwesomeIcon icon={faTable} /> Tables
+          <NavLink to='/mobile'>
+          <FaMobileAlt /> Mobiles
           </NavLink>
         </li>
         <li>
-          <NavLink to='/forms'>
-            <FontAwesomeIcon icon={faPenToSquare} /> Forms
+          <NavLink to='/earbuds'>
+          <BsEarbuds /> Earbuds
           </NavLink>
         </li>
         <li>
-          <NavLink to='/ui'>
-          <FaUikit /> UI
+          <NavLink to='/laptop'>
+          <IoMdLaptop /> Laptop
           </NavLink>
         </li>
         <li>
-          <NavLink to='/responsive'>
-          <DiResponsive />
-          Responsive
+          <NavLink to='/tv'>
+          <FaTv />
+          TV
           </NavLink>
         </li>
         <li>
-          <NavLink to='/styles'>
-            <FontAwesomeIcon icon={faPalette} /> Styles
+          <NavLink to='/fridge'>
+          <CgSmartHomeRefrigerator /> Refrigerator
           </NavLink>
         </li>
         <li>
           <NavLink to='/user'>
-            <FontAwesomeIcon icon={faUser} /> User Profile
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/login1'>
-            <CiLock /> Login
+          <FaUser />  User Profile
           </NavLink>
         </li>
         <li>

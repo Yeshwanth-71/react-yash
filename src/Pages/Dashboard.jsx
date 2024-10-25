@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Sidenav from '../Components/Sidenav';
 import Header from '../Components/Header';
-
+import Newmobile from '../Pages/Newmobile'
 function ContainerExample() {
   return (
     <Container>
@@ -13,6 +13,8 @@ function ContainerExample() {
         <Col sm={10}>
         <Header/>
         <h1>Dashboard</h1>
+        <Newmobile />
+        <Newearbuds/>
         </Col>
       </Row>
     </Container>

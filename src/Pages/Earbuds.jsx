@@ -12,7 +12,7 @@ function ContainerExample() {
 
         <Col sm={10}>
         <Header/>
-        <h1>Tables</h1>
+        <h1>Earbuds</h1>
         </Col>
       </Row>
     </Container>

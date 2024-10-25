@@ -1,26 +1,29 @@
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Sidenav from '../Components/Sidenav';
 import Header from '../Components/Header';
-import './ContainerExample.css'; // Import custom CSS
+import Newmobile from './Pages/Newmobile';
+import './ContainerExample.css'; // Optional: for layout-specific styling
 
 function ContainerExample() {
   return (
-    <div className="main-layout">
-      <Sidenav /> {/* Sidebar should be fixed, so we don't need to place it inside a Bootstrap grid */}
-      <div className="main-content">
-        <Header />
-        <Container fluid>
-          <Row>
-            <Col>
-              <h1>Dashboard</h1>
-              <p>Scrollable content goes here...</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col sm={2} className="sidenav-col">
+          <Sidenav />
+        </Col>
+
+        <Col sm={10} className="main-content">
+          <Header />
+          <div className="content-area">
+            <h1>Dashboard</h1>
+            <Newmobile />
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
