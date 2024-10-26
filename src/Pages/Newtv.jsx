@@ -7,7 +7,10 @@ function Mobile() {
             {Television.map((item) => (
                 <div className='new'>
                     <h2>{item.title}</h2>
-                    <p>ID: {item.id}</p>  {/* Display the id */}
+                    <p>Brand: {item.Brand}</p> 
+                    <p>DisplayTechnology: {item.DisplayTechnology}</p>
+                    <p>Resolution: {item.Resolution}</p>
+                    <p>RefreshRate: {item.RefreshRate}</p>
                     <p>Price: {item.Price}</p>
                     <img src={item.images} alt="" />
                 </div>

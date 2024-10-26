@@ -1,39 +1,51 @@
 export const productdata = [
     {
         id: 1,
-        title: "realme",  
-        price: 25000,
-        img:"https://m.media-amazon.com/images/I/81w8xa+XkSL._AC_UY218_.jpg",
+        Brand: "iphone",  
+        price: 119000,
+        img:"https://m.media-amazon.com/images/I/61xJlx-3KDL._AC_UY327_FMwebp_QL65_.jpg",
     },
     {
         id: 2,
-        title: "samsung",  
+        Brand: "samsung",  
         price: 150000,
         img:"https://m.media-amazon.com/images/I/71lD7eGdW-L._SX679_.jpg",
 
     },
     {
         id: 3,
-        title: "oneplus",  
+        Brand: "oneplus",  
         price: 40000,
-        img:"https://m.media-amazon.com/images/I/71XNeka-BRL._AC_UY218_.jpg",
+        img:"https://m.media-amazon.com/images/I/61LB+d0vheL._SX679_.jpg",
     },
     {
         id: 4,
-        title: "iqoo",  
+        Brand: "iqoo",  
         price: 23000,
-        img:"https://m.media-amazon.com/images/I/711ZTkL0l8L._AC_UY218_.jpg",
+        img:"https://m.media-amazon.com/images/I/61wHkeTOhWL._SX679_.jpg",
     },
     {
         id: 5,
-        title: "honor",  
+        Brand: "honor",  
         price: 18000,
         img:"https://m.media-amazon.com/images/I/71yVqjq0aeL._SX679_.jpg",
     },
     {
         id: 6,
-        title: "realme",  
-        price: 2500,
-        img:"https://m.media-amazon.com/images/I/51FFhrE2eYL._SY741_.jpg",
+        Brand: "poco",  
+        price: 8700,
+        img:"https://m.media-amazon.com/images/I/712tqhtIw1L._SY879_.jpg",
     },
+    {
+        id: 7,
+        Brand: "redmi",  
+        price: 13500,
+        img:"https://m.media-amazon.com/images/I/81ndCd07RuL._SX679_.jpg",
+    },
+    {
+        id: 8,
+        Brand: "realme",  
+        price: 25000,
+        img:"https://m.media-amazon.com/images/I/714oelPJK0L._SY879_.jpg",
+    }
 ];

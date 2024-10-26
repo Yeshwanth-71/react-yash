@@ -14,7 +14,7 @@ function MyNavbar() {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="mb-4"> {/* Fixed Navbar */}
       <Container fluid>
         {/* Left Arrow for Back Navigation */}
         <Nav className="me-auto">
@@ -38,19 +38,10 @@ function MyNavbar() {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto"> {/* Centers the menu items */}
             {/* Dropdown for Sample Menu */}
-            <Dropdown className="nav-dropdown-gap">
-              <Dropdown.Toggle variant="secondary" id="sample-menu-dropdown">
-                Sample Menu
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#item1">Item 1</Dropdown.Item>
-                <Dropdown.Item href="#item2">Item 2</Dropdown.Item>
-                <Dropdown.Item href="#item3">Item 3</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+
 
             {/* Dropdown for Yeshwanth */}
-            <Dropdown className="ms-3">
+            <Dropdown className="me-5">
               <Dropdown.Toggle variant="secondary" id="yeshwanth-dropdown">
                 Yeshwanth
               </Dropdown.Toggle>
@@ -74,10 +65,8 @@ function MyNavbar() {
 
           {/* GitHub Icon and Logout Icon on the right side */}
           <Nav className="ml-auto">
-            <Nav.Link href="https://github.com/" target="_blank" className="text-light">
-              <FaGithub size={20} /> {/* GitHub Icon */}
-            </Nav.Link>
-            <Nav.Link as={Link} to="/logout" className="text-light">
+            
+            <Nav.Link as={Link} to="/" className="text-light">
               <FontAwesomeIcon icon={faSignOutAlt} size="lg" /> {/* Logout Icon */}
             </Nav.Link>
           </Nav>

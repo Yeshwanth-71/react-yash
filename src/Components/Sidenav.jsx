@@ -1,55 +1,68 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { MdSpaceDashboard } from "react-icons/md";
-import {  FaMobileAlt, FaTv } from "react-icons/fa";
-import { IoMdLaptop } from "react-icons/io";
+import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { MdSpaceDashboard, MdError } from "react-icons/md";
+import { FaMobileAlt, FaTv, FaGithub, FaUser } from "react-icons/fa";
+import { IoMdLaptop, IoMdSettings } from "react-icons/io";
 import { BsEarbuds } from "react-icons/bs";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
-import {  FaGithub } from "react-icons/fa";
-import { MdError } from "react-icons/md";
-import { Link } from 'react-router-dom'; // Change to react-router-dom Link
-import { IoMdSettings } from "react-icons/io";
-import { FaUser } from "react-icons/fa";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Sidenav() {
+  const [showCategories, setShowCategories] = useState(false); // State to manage category dropdown visibility
+
+  const toggleCategories = () => {
+    setShowCategories(!showCategories); // Toggle dropdown visibility
+  };
+
   return (
     <nav className='sidenav bg-dark text-light'>
       <h2 className='sidenav-heading'>Menu</h2><br />
       <ul className="nav-items">
         <li>
           <NavLink to='/dashboard'>
-          <MdSpaceDashboard />Dashboard
+            <MdSpaceDashboard /> Dashboard
           </NavLink>
         </li>
+
+        {/* Categories Section */}
         <li>
-          <NavLink to='/mobile'>
-          <FaMobileAlt /> Mobiles
-          </NavLink>
+          <h5 className='text-light' onClick={toggleCategories} style={{ cursor: 'pointer' }}>
+            <FaMobileAlt /> Categories
+          </h5>
         </li>
-        <li>
-          <NavLink to='/earbuds'>
-          <BsEarbuds /> Earbuds
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/laptop'>
-          <IoMdLaptop /> Laptop
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/tv'>
-          <FaTv />
-          TV
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/fridge'>
-          <CgSmartHomeRefrigerator /> Refrigerator
-          </NavLink>
-        </li>
+        {showCategories && ( // Conditional rendering for category items
+          <ul className="nav flex-column ml-3"> {/* Add margin to indent dropdown */}
+            <li>
+              <NavLink to='/mobile' className="dropdown-item">
+                <FaMobileAlt /> Mobiles
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/earbuds' className="dropdown-item">
+                <BsEarbuds /> Earbuds
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/laptop' className="dropdown-item">
+                <IoMdLaptop /> Laptop
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/tv' className="dropdown-item">
+                <FaTv /> TV
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/fridge' className="dropdown-item">
+                <CgSmartHomeRefrigerator /> Refrigerator
+              </NavLink>
+            </li>
+          </ul>
+        )}
+
         <li>
           <NavLink to='/user'>
-          <FaUser />  User Profile
+            <FaUser /> User Profile
           </NavLink>
         </li>
         <li>
@@ -59,19 +72,26 @@ function Sidenav() {
         </li>
         <li>
           <NavLink to='/settings'>
-          <IoMdSettings />  Settings
+            <IoMdSettings /> Settings
           </NavLink>
         </li>
         <li>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="nav-link">
+          <a 
+            href="https://github.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="nav-link"
+          >
             <FaGithub /> GitHub
           </a>
         </li>
       </ul>
-      <Link to='/logout'><center>
-        <button className='btn btn-primary btn-lg' aria-label="Logout">
-          Logout
-        </button></center>
+      <Link to='/'>
+        <center>
+          <button className='btn btn-primary btn-lg' aria-label="Logout">
+            Logout
+          </button>
+        </center>
       </Link>
     </nav>
   );

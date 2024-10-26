@@ -7,7 +7,9 @@ function Mobile() {
             {Laptop.map((item) => (
                 <div className='new'>
                     <h2>{item.title}</h2>
-                    <p>ID: {item.id}</p>  {/* Display the id */}
+                    <p>ModelName: {item.ModelName}</p>  {/* Display the id */}
+                    <p>ScreenSize: {item.ScreenSize}</p>
+                    <p>CPUModel: {item.CPUModel}</p>
                     <p>Price: {item.Price}</p>
                     <img src={item.Image} alt="" />
                 </div>

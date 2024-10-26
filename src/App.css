@@ -25,48 +25,99 @@
 .Signup input{
   border-bottom: 2px solid black;
 }
-/* src/App.css */
-.navbar {
-  margin-bottom: 20px; /* Space below the navbar */
-  position: fixed;
-  width: 113%;
-  flex-grow: 1;
-}
-.sidenav, .navbar {
-  margin: 0; 
-  padding: 0;
-}
+/* styles.css */
 .sidenav {
-  width: 250px; /* Adjust width as necessary */
   height: 100vh; /* Full height */
-  position: fixed; /* Fix the sidenav */
-  left: 0; /* Align to the left */
+  width: 250px; /* Fixed width */
+  position: fixed; /* Fixed position */
+  left: -250px; /* Hidden off-screen */
   top: 0; /* Align to the top */
-  overflow-y: auto; /* Scroll if content exceeds height */
-  display: flex;
-  flex-direction: column; /* Arrange children in a column */
-  flex-shrink: 0;
+  background-color: #343a40; /* Dark background */
+  color: white; /* Text color */
+  transition: left 0.3s ease; /* Smooth transition */
+  padding: 20px; /* Padding */
+  z-index: 1000; /* Above other elements */
+}
+
+.sidenav.open {
+  left: 0; /* Slide in when open */
 }
 
 .nav-items {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  flex: 1; /* Take up all remaining space */
-  margin: 0; /* Remove default margin */
+  list-style-type: none; /* Remove list bullets */
+  padding: 0; /* No padding */
 }
 
 .nav-items li {
-  padding: 10px; /* Add padding to items */
+  margin: 15px 0; /* Margin for list items */
+}
+
+.nav-items a {
+  color: #ffffff; /* Link color */
+  text-decoration: none; /* No underline */
+  display: flex; /* Flexbox for icons */
+  align-items: center; /* Center icons vertically */
+}
+
+.nav-items a:hover {
+  background-color: #007bff; /* Hover color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding on hover */
 }
 
 .sidenav-heading {
-  margin: 10px; /* Add margin around headings */
-  text-align: center;
-  top: 0;
-  left: 0;
-  width: 16%;
-  background-color: #495057;
+  font-size: 1.5rem; /* Larger heading */
+  margin-bottom: 20px; /* Space below heading */
 }
+/* styles.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Start a bit higher */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
+.nav-items li {
+  opacity: 0; /* Start with hidden */
+  animation: fadeIn 0.5s forwards; /* Fade in animation */
+}
+
+/* Apply delay for each item */
+.nav-items li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.nav-items li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav-items li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.nav-items li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.nav-items li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.nav-items li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.nav-items li:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.nav-items li:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.nav-items li:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.nav-items li:nth-child(10) {
+  animation-delay: 1.0s;
+}
+
 
 .logout-heading {
   margin-top: auto; /* Push to the bottom of the sidenav */
@@ -147,6 +198,7 @@
 }
 .sidenav-heading{
   position: fixed;
+  text-align: center;
   top: 0;
 }
 
@@ -166,6 +218,10 @@
   padding: 20px;
   overflow-y: auto; /* Sidebar should scroll if its content overflows */
 }
+.sidenav {
+  margin-top: 56px; /* Adjust based on the height of your navbar */
+}
+
 
 .main-content {
   margin: 20px;
@@ -209,5 +265,20 @@
   height: 400px;
   width: 400px;
 }
+.main-content {
+  margin-top: 56px; /* Adjust this value based on navbar height */
+}
 
-
+.yash h2{
+  text-align: center;
+}
+.view{
+  margin-top: 100px;
+}
+.text-end{
+  margin-top: 50%px;
+}
+.new img{
+  height: 400px;
+  width: 400px;
+}
