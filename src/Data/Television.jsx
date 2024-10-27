@@ -81,7 +81,7 @@ export const Television=[
     {
         id:8,
         ScreenSize:	"50 Inches",
-        Brand:	"LG",
+        Brand:	"Samsung",
         DisplayTechnology:"Crystal LED",
         Resolution:"720p",
         RefreshRate:"60 Hz",

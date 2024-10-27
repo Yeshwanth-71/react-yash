@@ -1,23 +1,36 @@
 import React from 'react';
-import {ref} from '../Data/Fridge';
-
+import { ref } from '../Data/Fridge';
 
 function Mobile() {
+    const handleButtonClick = (item) => {
+        console.log("Viewing details for:", item);
+        // Add navigation or other actions here, if needed
+    };
+
     return (
-       
-         <div className='any1'>
-            {ref.map((item) => (
-                <div className='new'>
-                    <h2>{item.title}</h2>
-                    <p>Brand: {item.Brand}</p> 
-                    <p>EnergyStar: {item.EnergyStar}</p> 
-                    <p>Capacity: {item.Capacity}</p> 
-                    <p>Price: {item.Price}</p>
-                    <img src={item.img} alt="" />
+        <div className='any1'>
+            {ref.map((item, index) => (
+                <div key={index} className='new' style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
+                    
+                    <img src={item.img} alt={item.title} style={{  height: "auto", marginRight: "20px" }} />
+                    
+                    {/* Text content section */}
+                    <div>
+                        <h2>{item.title}</h2>
+                        <h2>Brand: {item.Brand}</h2> 
+                        <h2>Energy Star Rating: {item.EnergyStar}</h2> 
+                        <h2>Capacity: {item.Capacity}</h2> 
+                        <h2>Price: {item.Price}</h2>
+                        <button 
+                            className='btn btn-warning' 
+                            onClick={() => handleButtonClick(item)}
+                        >
+                             Add to Cart
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
-       
     );
 }
 

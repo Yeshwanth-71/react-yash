@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faUser, faCog, faEnvelope, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Dropdown, Navbar, Nav, Form, FormControl, Container } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
-import { FaGithub } from 'react-icons/fa'; // Import GitHub icon
+import { Link, useNavigate } from 'react-router-dom';
+import { TiShoppingCart } from "react-icons/ti";
 
 function MyNavbar() {
   const navigate = useNavigate(); // Hook to navigate programmatically
@@ -14,17 +14,17 @@ function MyNavbar() {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="mb-4"> {/* Fixed Navbar */}
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="mb-4">
       <Container fluid>
         {/* Left Arrow for Back Navigation */}
         <Nav className="me-auto">
-          <Nav.Link onClick={handleBackClick} className="text-light">
-            <FontAwesomeIcon icon={faArrowLeft} size="lg" /> {/* Left Arrow Icon */}
+          <Nav.Link onClick={handleBackClick} className="text-light" aria-label="Go Back">
+            <FontAwesomeIcon icon={faArrowLeft} size="lg" />
           </Nav.Link>
         </Nav>
 
-        {/* Left side: Search Bar */}
-        <Form className="d-flex mr-auto">
+        {/* Search Bar */}
+        <Form className="d-flex me-auto">
           <FormControl
             type="text"
             placeholder="Search"
@@ -33,16 +33,13 @@ function MyNavbar() {
           />
         </Form>
 
-        {/* Center alignment for Sample Menu and Yeshwanth */}
+        {/* Center alignment for Dropdown */}
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto"> {/* Centers the menu items */}
-            {/* Dropdown for Sample Menu */}
-
-
             {/* Dropdown for Yeshwanth */}
             <Dropdown className="me-5">
-              <Dropdown.Toggle variant="secondary" id="yeshwanth-dropdown">
+              <Dropdown.Toggle variant="light" id="yeshwanth-dropdown">
                 Yeshwanth
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -63,11 +60,13 @@ function MyNavbar() {
             </Dropdown>
           </Nav>
 
-          {/* GitHub Icon and Logout Icon on the right side */}
+          {/* Cart Icon */}
           <Nav className="ml-auto">
-            
-            <Nav.Link as={Link} to="/" className="text-light">
-              <FontAwesomeIcon icon={faSignOutAlt} size="lg" /> {/* Logout Icon */}
+            <Nav.Link as={Link} to="/cart" className="text-light" aria-label="Shopping Cart">
+              <TiShoppingCart size={32} /> {/* Increase the size here */}
+            </Nav.Link>
+            <Nav.Link as={Link} to="/" className="text-light" aria-label="Logout">
+              <FontAwesomeIcon icon={faSignOutAlt} size="lg" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

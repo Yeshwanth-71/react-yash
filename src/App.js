@@ -33,7 +33,7 @@ function App() {
           <Route path='/fridge' element={<Refrigerator />} />
           <Route path='/tv' element={<TV />} />
           <Route path='/error' element={<Error />} />
-          <Route path='/logout' element={<Logout />} />
+          <Route path='/' element={<Logout />} />
           <Route path='/*' element={<Nodata />} />
           
          

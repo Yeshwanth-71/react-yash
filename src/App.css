@@ -252,10 +252,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.any1 img{
-  height: 700px;
-  width: 250px;
-}
+
 .any2{
   display: flex;
   flex-wrap: wrap;
@@ -278,7 +275,16 @@
 .text-end{
   margin-top: 50%px;
 }
+.new{
+    margin-top: 20px;
+}
 .new img{
   height: 400px;
   width: 400px;
+}
+.btn{
+  text-align: center;
+}
+.new .btn{
+  text-align: center;
 }

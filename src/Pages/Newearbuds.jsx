@@ -2,17 +2,35 @@ import React from 'react';
 import { productlist } from '../Data/Earbuds';
 
 function Earbuds() {
+    const handleButtonClick = (item) => {
+        console.log(`Button clicked for ${item.title}`);
+        // Add more functionality here if needed.
+    };
+
     return (
         <div className='any'>
             {productlist.map((item) => (
-                <div className='new'>
-                    <h2>{item.title}</h2>
-                    <p>Brand: {item.Brand}</p>  {/* Display the id */}
-                    <p>Price: {item.price}</p>
-                    <img src={item.img} alt="" />
+                <div className='new' key={item.id} style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
+                    
+                    <img src={item.img} alt={item.title} style={{  height: "auto", marginRight: "20px" }} />
+                    
+                    {/* Text content section */}
+                    <div>
+                        <h2>{item.title}</h2>
+                        <h2>Brand: {item.Brand}</h2>
+                        <h2>ID: {item.id}</h2>
+                        <h2>Price: {item.price}</h2>
+                        <button 
+                            className='btn btn-warning' 
+                            onClick={() => handleButtonClick(item)}
+                        >
+                             Add to Cart
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
     );
 }
+
 export default Earbuds;

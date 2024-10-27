@@ -15,7 +15,10 @@ function ContainerExample() {
 
         <Col sm={10} className='yash'>
           <Header />
-          <center><h1>Dashboard</h1></center><br /><br />
+          <div style={{ textAlign: "center", marginTop: "70px" }}>
+            <h1 style={{ fontSize: "3rem"}}>Dashboard</h1>
+           
+          </div>
 
           {/* Nested grid system within the main content area */}
           <Container>
