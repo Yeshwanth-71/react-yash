@@ -18,7 +18,7 @@ function Mobile() {
                     <div>
                         <h2>{item.title}</h2>
                         <h2>Brand: {item.Brand}</h2>
-                        <h2>Price: {item.price}</h2>
+                        <h2>Price: <span style={{ fontSize: '0.8em' }}>₹</span>{item.price}</h2>
                         <button 
                             className='btn btn-warning' 
                             onClick={() => handleButtonClick(item)}

@@ -23,7 +23,7 @@ function ContainerExample() {
             <h1>Dashboard</h1>
             <Newrefrigerator />
             <Newmobile />
-            <Newearbuds />
+           
           </div>
         </Col>
       </Row>

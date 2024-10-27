@@ -21,7 +21,7 @@ function Mobile() {
                         <h2>Display Technology: {item.DisplayTechnology}</h2>
                         <h2>Resolution: {item.Resolution}</h2>
                         <h2>Refresh Rate: {item.RefreshRate}</h2>
-                        <h2>price: {item.price}</h2>
+                        <h2>price: <span style={{ fontSize: '0.8em' }}>₹</span>{item.price}</h2>
                         <button 
                             className='btn btn-warning' 
                             onClick={() => handleButtonClick(item)}
