@@ -13,7 +13,8 @@ function ContainerExample() {
 
         <Col sm={10}>
         <Header/>
-        <h1>Earbuds</h1>
+        <div style={{ textAlign: "center", marginTop: "70px" }}>
+        <h1>Earbuds</h1></div>
         <Newearbuds />
         </Col>
       </Row>

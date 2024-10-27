@@ -12,7 +12,8 @@ function ContainerExample() {
 
         <Col sm={10}>
         <Header/>
-        <h1>User Profile</h1>
+        <div style={{ textAlign: "center", marginTop: "70px" }}>
+        <h1>User Profile</h1></div>
         </Col>
       </Row>
     </Container>

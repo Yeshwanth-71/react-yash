@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Television } from '../Data/Television';
 
 function Mobile() {
+    const [cart, setCart] = useState([]);
+
     const handleButtonClick = (item) => {
         console.log("Viewing details for:", item);
-        // You can add navigation or other actions here, if needed
+        setCart([...cart, item]);  // Add item to cart
+        alert(`${item.title} has been added to your cart.`);
     };
 
     return (
         <div className="any2">
             {Television.map((item, index) => (
                 <div key={index} className='new' style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
-                    
-                    <img src={item.images} alt={item.title} style={{  height: "auto", marginRight: "20px" }} />
+                    <img src={item.images} alt={item.title} style={{ height: "auto", marginRight: "20px" }} />
                     
                     {/* Text content section */}
                     <div>
@@ -21,7 +23,7 @@ function Mobile() {
                         <h2>Display Technology: {item.DisplayTechnology}</h2>
                         <h2>Resolution: {item.Resolution}</h2>
                         <h2>Refresh Rate: {item.RefreshRate}</h2>
-                        <h2>price: <span style={{ fontSize: '0.8em' }}>₹</span>{item.price}</h2>
+                        <h2>Price: <span style={{ fontSize: '0.8em' }}>₹</span>{item.price}</h2>
                         <button 
                             className='btn btn-warning' 
                             onClick={() => handleButtonClick(item)}
