@@ -5,6 +5,7 @@ import { FaMobileAlt, FaTv, FaGithub, FaUser } from "react-icons/fa";
 import { IoMdLaptop, IoMdSettings } from "react-icons/io";
 import { BsEarbuds } from "react-icons/bs";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
+import { IoMdMenu } from "react-icons/io";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Sidenav() {
@@ -27,7 +28,7 @@ function Sidenav() {
         {/* Categories Section */}
         <li>
           <h5 className='text-light' onClick={toggleCategories} style={{ cursor: 'pointer' }}>
-            <FaMobileAlt /> Categories
+          <IoMdMenu /> Categories
           </h5>
         </li>
         {showCategories && ( // Conditional rendering for category items
