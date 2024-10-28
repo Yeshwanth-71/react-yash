@@ -15,6 +15,11 @@ import TV from './Pages/TV';
 import Error from './Pages/Error';
 import Nodata from './Pages/Nodata';
 import Logout from './Pages/Logout'; // Renamed to avoid conflict
+import Mobdetails from './Pages/Details/Mobdetails'
+import Earbuddetails from './Pages/Details/Earbuddetails'
+import Laptopdetails from './Pages/Details/Laptopdetails'
+import Fridgedetails from './Pages/Details/Fridgedetails'
+import Tvdetails from './Pages/Details/Tvdetails'
 
 
 function App() {
@@ -35,8 +40,12 @@ function App() {
           <Route path='/error' element={<Error />} />
           <Route path='/' element={<Logout />} />
           <Route path='/*' element={<Nodata />} />
+          <Route path='/mobile/:id' element={<Mobdetails />} />
+          <Route path='/earbuds/:id' element={<Earbuddetails />} />
+          <Route path='/laptop/:id' element={<Laptopdetails />} />
+          <Route path='/fridge/:id' element={<Fridgedetails />} />
+          <Route path='/tv/:id' element={<Tvdetails />} />
           
-         
         </Routes>
       </Router>
     </div>

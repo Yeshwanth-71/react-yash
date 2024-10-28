@@ -1,8 +1,10 @@
 import React from 'react';
 import { productlist } from '../Data/Earbuds';
+import { Link } from 'react-router-dom';
 
 function Earbuds() {
     return (
+        <Link to='/earbuds/:id' style={{textDecoration:"none",color:"black"}}>
         <div className='any'>
             {productlist.map((item) => (
                 <div className='new' key={item.id}>
@@ -22,6 +24,7 @@ function Earbuds() {
                 </div>
             ))}
         </div>
+        </Link>
     );
 }
 

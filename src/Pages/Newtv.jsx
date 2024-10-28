@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Television } from '../Data/Television';
+import { Link } from 'react-router-dom';
 
 function Mobile() {
    
 
-  
     return (
+        <Link to='/tv/:id' style={{textDecoration:"none",color:"black"}}>
         <div className="any2">
             {Television.map((item, index) => (
                 <div key={index} className='new11' >
@@ -29,6 +30,7 @@ function Mobile() {
                 </div>
             ))}
         </div>
+        </Link>
     );
 }
 

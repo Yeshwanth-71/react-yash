@@ -1,10 +1,11 @@
 import React from 'react';
 import { ref } from '../Data/Fridge';
+import { Link } from 'react-router-dom';
 
 function Mobile() {
     
 
-    return (
+    return (<Link to='/fridge/:id' style={{textDecoration:"none",color:"black"}}>
         <div className='any3'>
             {ref.map((item, index) => (
                 <div key={index} className='new22' >
@@ -28,6 +29,7 @@ function Mobile() {
                 </div>
             ))}
         </div>
+        </Link>
     );
 }
 

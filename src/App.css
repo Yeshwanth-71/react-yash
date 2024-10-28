@@ -374,11 +374,10 @@ e */
   margin-top: 50%px;
 }
 
-
 .one{
-  border: 1px solid black;
+  border: 2px solid black;
 }
 .two{
-  border: 1px solid black;
+  border: 2px solid black;
   gap: 20px;
 }

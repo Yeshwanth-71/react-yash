@@ -21,7 +21,7 @@ function ContainerExample() {
           </div><br /><br />
 
           {/* Nested grid system within the main content area */}
-          <Container className='one mb-4'>
+          <Container className='one mb-4'><br /><br />
             <Row >
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/71lD7eGdW-L._SX679_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -47,7 +47,7 @@ function ContainerExample() {
             
           </Container>
 
-          <Container className='two mb-4'>
+          <Container className='two mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/51+e7yrgPpL._AC_UL640_QL65_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -72,7 +72,7 @@ function ContainerExample() {
            
           </Container>
           
-          <Container className='one mb-4'>
+          <Container className='one mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -97,7 +97,7 @@ function ContainerExample() {
             
           </Container>
 
-          <Container className='one mb-4'>
+          <Container className='one mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/71N7mwf1C7L._AC_UY218_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -122,7 +122,7 @@ function ContainerExample() {
             
           </Container>
 
-          <Container className='one mb-4'>
+          <Container className='one mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/61hEEWSj-cL._SY879_.jpg" alt="" width={"300px"} height={"300px"}/>

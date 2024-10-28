@@ -1,10 +1,12 @@
 import React from 'react';
 import { Laptop } from '../Data/Laptop';
+import { Link } from 'react-router-dom';
 
 function Mobile() {
    
 
     return (
+        <Link to='/laptop/:id' style={{textDecoration:"none",color:"black"}}>
         <div className="any">
             {Laptop.map((item, index) => (
                 <div key={index} className='new' >
@@ -28,6 +30,7 @@ function Mobile() {
                 </div>
             ))}
         </div>
+        </Link>
     );
 }
 
