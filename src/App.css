@@ -150,19 +150,22 @@
   align-items: center; /* Vertically center align icons and text */
 }
 
+/* Default styles for sidenav items */
 .nav-items li a {
+  color: #ffffff;
   text-decoration: none;
-  color: #fff;
-  display: flex; /* Keep icon and text in a row */
+  display: flex;
   align-items: center;
-  width: 100%; /* Ensure the entire width is clickable */
-  padding: 0.5rem;
+  width: 100%;
+  padding: 10px; /* Keep padding consistent */
   border-radius: 4px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* Smooth transition for color */
 }
 
+/* Hover effect without layout shift */
 .nav-items li a:hover {
-  background-color: #495057; /* Background color on hover */
+  background-color: #495057;
+  color: #ffffff; /* Optional: ensure color remains visible on hover */
 }
 
 .nav-items li a svg {
@@ -180,6 +183,15 @@
   text-align: center;
   margin-top: 100px;
 }
+/* Navbar.css */
+.navbar {
+  padding: 0.5rem 1rem; /* Adjust navbar padding */
+}
+
+.nav-link {
+  margin-right: 10px; /* Add margin to links for better spacing */
+}
+
 /* Layout for fixed sidebar */
 .main-layout {
   display: flex;
@@ -233,35 +245,121 @@
 
 }
 
+
+/* Add to your CSS file */
+.any {
+  display: flex;
+  flex-wrap: wrap; /* Wraps to the next line if needed */
+  gap: 20px; /* Small gap between product cards */
+  justify-content: center; /* Center-aligns all items */
+  padding: 20px;
+}
+
+.new {
+  display: flex;
+  gap: 10px; /* Gap between image and text inside each product */
+  width: 400px; /* Width of each product card */
+  border: 1px solid #ddd; /* Optional border for each card */
+  padding: 10px;
+  align-items: center; /* Vertically center image and text */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.new img {
+  width: 150px; /* Adjust width for image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.new div {
+  text-align: left; /* Align text to the left for a clean look */
+}
+
+
+/* Add to your CSS file */
+.any {
+    display: flex;
+    flex-wrap: wrap; /* Wraps to the next line if needed */
+    gap: 20px; /* Small gap between product cards */
+    justify-content: center; /* Center-aligns all items */
+    padding: 20px;
+}
+
+.new {
+    display: flex;
+    gap: 10px; /* Gap between image and text inside each product */
+    width: 400px; /* Width of each product card */
+    border: 1px solid #ddd; /* Optional border for each card */
+    padding: 10px;
+    align-items: center; /* Vertically center image and text */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.new img {
+    width: 150px; /* Adjust width for image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.new div {
+    text-align: left; /* Align text to the left for a clean look */
+}
+
+.any2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Small gap between each item */
+  justify-content: space-around;
+}
+
+.new11 {
+  width: 45%; /* Adjusts the width of each card */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+}
+
+.new11 img {
+  width: 150px; /* Ensures images are consistently sized */
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Wrapper container for refrigerator items */
+.any3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Small gap between each item */
+  justify-content: space-around;
+}
+
+.new22 {
+  width: 45%; /* Adjusts the width of each card to fit two per row */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+}
+
+.new22 img {
+  width: 150px; /* Ensures images are consistently sized */
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
 /* To ensure the main content also scrolls if too long */
 .container-fluid {
   height: 100%;
 }
-.any{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.any img{
-  height: 500px;
-  width: 400px;
-}
-/* In your CSS file */
-.any1{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.any2{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.any2 img{
-  height: 400px;
-  width: 400px;
-}
+e */
 .main-content {
   margin-top: 56px; /* Adjust this value based on navbar height */
 }
@@ -275,19 +373,8 @@
 .text-end{
   margin-top: 50%px;
 }
-.new{
-    margin-top: 20px;
-}
-.new img{
-  height: 400px;
-  width: 400px;
-}
-.btn{
-  text-align: center;
-}
-.new .btn{
-  text-align: center;
-}
+
+
 .one{
   border: 1px solid black;
 }

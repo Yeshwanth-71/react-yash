@@ -7,9 +7,9 @@ function Mobile() {
     return (
         <div className='any'>
             {productdata.map((item, index) => (
-                <div key={index} className='new' style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
+                <div key={index} className='new' >
                     
-                    <img src={item.img} alt={item.title} style={{  height: "auto", marginRight: "20px" }} />
+                    <img src={item.img} alt={item.title}  />
                     
                     {/* Text content section */}
                     <div>

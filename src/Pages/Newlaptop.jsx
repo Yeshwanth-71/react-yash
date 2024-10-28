@@ -7,9 +7,9 @@ function Mobile() {
     return (
         <div className="any">
             {Laptop.map((item, index) => (
-                <div key={index} className='new' style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
+                <div key={index} className='new' >
                     
-                    <img src={item.Image} alt={item.title} style={{  height: "auto", marginRight: "20px" }} />
+                    <img src={item.Image} alt={item.title}  />
                     
                     {/* Text content section */}
                     <div>

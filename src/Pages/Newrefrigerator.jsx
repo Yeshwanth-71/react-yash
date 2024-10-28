@@ -5,11 +5,11 @@ function Mobile() {
     
 
     return (
-        <div className='any1'>
+        <div className='any3'>
             {ref.map((item, index) => (
-                <div key={index} className='new' style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
+                <div key={index} className='new22' >
                     
-                    <img src={item.img} alt={item.title} style={{  height: "auto", marginRight: "20px" }} />
+                    <img src={item.img} alt={item.title}  />
                     
                     {/* Text content section */}
                     <div>

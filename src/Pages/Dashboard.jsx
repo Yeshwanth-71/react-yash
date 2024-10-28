@@ -18,7 +18,7 @@ function ContainerExample() {
           <div style={{ textAlign: "center", marginTop: "70px" }}>
             <h1 style={{ fontSize: "3rem"}}>Dashboard</h1>
            
-          </div>
+          </div><br /><br />
 
           {/* Nested grid system within the main content area */}
           <Container className='one mb-4'>
@@ -66,7 +66,7 @@ function ContainerExample() {
             </Row>
             <Row className="mt-3">
               <Col md={12} className="text-end">
-                <Link to="/fridge"><h5>View all</h5></Link>
+                <Link to="/earbuds"><h5>View all</h5></Link>
               </Col>
             </Row>
            
@@ -91,7 +91,7 @@ function ContainerExample() {
             </Row>
             <Row className="mt-3">
               <Col md={12} className="text-end">
-                <Link to="/fridge"><h5>View all</h5></Link>
+                <Link to="/laptop"><h5>View all</h5></Link>
               </Col>
             </Row>
             
@@ -116,7 +116,7 @@ function ContainerExample() {
             </Row>
             <Row className="mt-3">
               <Col md={12} className="text-end">
-                <Link to="/fridge"><h5>View all</h5></Link>
+                <Link to="/tv"><h5>View all</h5></Link>
               </Col>
             </Row>
             

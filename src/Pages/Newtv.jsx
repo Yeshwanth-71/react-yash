@@ -8,8 +8,8 @@ function Mobile() {
     return (
         <div className="any2">
             {Television.map((item, index) => (
-                <div key={index} className='new' style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
-                    <img src={item.images} alt={item.title} style={{ height: "auto", marginRight: "20px" }} />
+                <div key={index} className='new11' >
+                    <img src={item.images} alt={item.title}  />
                     
                     {/* Text content section */}
                     <div>
