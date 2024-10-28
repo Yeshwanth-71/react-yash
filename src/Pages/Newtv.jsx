@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { Television } from '../Data/Television';
 
 function Mobile() {
-    const [cart, setCart] = useState([]);
+   
 
-    const handleButtonClick = (item) => {
-        console.log("Viewing details for:", item);
-        setCart([...cart, item]);  // Add item to cart
-        alert(`${item.title} has been added to your cart.`);
-    };
-
+  
     return (
         <div className="any2">
             {Television.map((item, index) => (
@@ -26,7 +21,7 @@ function Mobile() {
                         <h2>Price: <span style={{ fontSize: '0.8em' }}>₹</span>{item.price}</h2>
                         <button 
                             className='btn btn-warning' 
-                            onClick={() => handleButtonClick(item)}
+                         
                         >
                             Add to Cart
                         </button>

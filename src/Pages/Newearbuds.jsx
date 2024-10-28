@@ -2,10 +2,7 @@ import React from 'react';
 import { productlist } from '../Data/Earbuds';
 
 function Earbuds() {
-    const handleButtonClick = (item) => {
-        console.log(`Button clicked for ${item.title}`);
-        // Add more functionality here if needed.
-    };
+   
 
     return (
         <div className='any'>
@@ -22,7 +19,7 @@ function Earbuds() {
                         <h2>Price: <span style={{ fontSize: '0.8em' }}>₹</span>{item.price}</h2>
                         <button 
                             className='btn btn-warning' 
-                            onClick={() => handleButtonClick(item)}
+                           
                         >
                              Add to Cart
                         </button>

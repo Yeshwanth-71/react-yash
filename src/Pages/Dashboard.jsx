@@ -21,13 +21,8 @@ function ContainerExample() {
           </div>
 
           {/* Nested grid system within the main content area */}
-          <Container>
-           <Row className="mt-3">
-              <Col md={12} className="text-end">
-                <Link to="/mobile"><h5>View all</h5></Link>
-              </Col>
-            </Row>
-            <Row>
+          <Container className='one mb-4'>
+            <Row >
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/71lD7eGdW-L._SX679_.jpg" alt="" width={"300px"} height={"300px"}/>
                 <h2>Samsung</h2>
@@ -43,15 +38,16 @@ function ContainerExample() {
                 <h2>Iqoo</h2>
               </Col>
             </Row>
+
+            <Row className="mt-3" >
+              <Col md={12} className="text-end">
+                <Link to="/mobile"><h5>View all</h5></Link>
+              </Col>
+            </Row>
             
           </Container>
 
-          <Container>
-           <Row className="mt-3">
-              <Col md={12} className="text-end">
-                <Link to="/earbuds"><h5>View all</h5></Link>
-              </Col>
-            </Row>
+          <Container className='two mb-4'>
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/51+e7yrgPpL._AC_UL640_QL65_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -68,15 +64,15 @@ function ContainerExample() {
                 <h2>Boston</h2>
               </Col>
             </Row>
+            <Row className="mt-3">
+              <Col md={12} className="text-end">
+                <Link to="/fridge"><h5>View all</h5></Link>
+              </Col>
+            </Row>
            
           </Container>
           
-          <Container>
-           <Row className="mt-3">
-              <Col md={12} className="text-end">
-                <Link to="/laptop"><h5>View all</h5></Link>
-              </Col>
-            </Row>
+          <Container className='one mb-4'>
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -93,15 +89,15 @@ function ContainerExample() {
                 <h2>Hp</h2>
               </Col>
             </Row>
+            <Row className="mt-3">
+              <Col md={12} className="text-end">
+                <Link to="/fridge"><h5>View all</h5></Link>
+              </Col>
+            </Row>
             
           </Container>
 
-          <Container>
-            <Row className="mt-3">
-              <Col md={12} className="text-end">
-                <Link to="/tv"><h5>View all</h5></Link>
-              </Col>
-            </Row>
+          <Container className='one mb-4'>
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/71N7mwf1C7L._AC_UY218_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -118,15 +114,15 @@ function ContainerExample() {
                 <h2>Sony</h2>
               </Col>
             </Row>
-            
-          </Container>
-
-          <Container>
-           <Row className="mt-3">
+            <Row className="mt-3">
               <Col md={12} className="text-end">
                 <Link to="/fridge"><h5>View all</h5></Link>
               </Col>
             </Row>
+            
+          </Container>
+
+          <Container className='one mb-4'>
             <Row>
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/61hEEWSj-cL._SY879_.jpg" alt="" width={"300px"} height={"300px"}/>
@@ -141,6 +137,11 @@ function ContainerExample() {
               <Col md={3} className='yash'>
                 <img src="https://m.media-amazon.com/images/I/61+Z57deoBL._SX679_.jpg" alt="" width={"290px"} height={"290px"} />
                 <h2>Panasonic</h2>
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col md={12} className="text-end">
+                <Link to="/fridge"><h5>View all</h5></Link>
               </Col>
             </Row>
           

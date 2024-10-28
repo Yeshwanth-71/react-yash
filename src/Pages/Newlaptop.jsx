@@ -2,10 +2,7 @@ import React from 'react';
 import { Laptop } from '../Data/Laptop';
 
 function Mobile() {
-    const handleButtonClick = (item) => {
-        console.log("Viewing details for:", item);
-        // Add navigation or other actions here, if needed
-    };
+   
 
     return (
         <div className="any">
@@ -23,7 +20,7 @@ function Mobile() {
                         <h2>Price: <span style={{ fontSize: '0.8em' }}>₹</span>{item.Price}</h2>
                         <button 
                             className='btn btn-warning' 
-                            onClick={() => handleButtonClick(item)}
+                           
                         >
                              Add to Cart
                         </button>
