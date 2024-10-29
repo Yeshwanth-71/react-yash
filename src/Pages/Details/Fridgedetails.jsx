@@ -4,12 +4,22 @@ import {ref} from '../../Data/Fridge'
 
 function MobDet() {
     const {id} = useParams();
-    const mob = ref.find((e)=> e.id === id)
+    const item = ref.find((e)=> e.id === Number(id))
+    
+    console.log(id)
     
   return (
-    <div>
-        <p>Mobile Product details</p>
-    </div>
+    <div className='any'>
+          <div>
+            <img src={item.img} alt="" />
+            <p>{item.id}</p><br />
+            <p>{item.Brand}</p><br />
+            <p>{item.Capacity}</p><br />
+            <p>{item.Configuration}</p><br />
+            <p>{item.EnergyStar}</p>
+            <p>{item.Price}</p>
+          </div>
+        </div>
   )
 }
 
