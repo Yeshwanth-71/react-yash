@@ -10,10 +10,12 @@ function MobDet() {
     
   return (
     <div className='any'>
-          <div>
+          <div className=''>
             <img src={item.img} alt="" />
-            <p>{item.id}</p>
-            <p>{item.Brand}</p>
+            <h2>{item.Brand}</h2>
+            <h2>{item.price}</h2>
+            <button className='btn btn-warning'>Add to Cart</button>
+
           </div>
         </div>
   )

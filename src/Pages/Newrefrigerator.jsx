@@ -1,27 +1,31 @@
-import React from 'react'
-import {ref} from '../Data/Fridge'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { ref } from '../Data/Fridge';
+import { Link } from 'react-router-dom';
+
 function Newmobile() {
   return (
-    <div>
-      {
-        ref.map((e)=>{
-            return(
-                <Link to={`/fridge/${e.id}`} style={{textDecoration:"none",color:"black"}}>
-                    <div className='new'>
-                        <img src={e.img} alt="" />
-                        <p>{e.Brand}</p><br />
-                        <p>{e.Capacity}</p><br />
-                        <p>{e.Configuration}</p><br />
-                        <p>{e.EnergyStar}</p><br />
-                        <p>{e.Price}</p>
-                    </div>
-                </Link>
-            )
-        })
-      }
+    <div className="product-container">
+      {ref.map((e) => (
+        <Link 
+          to={`/fridge/${e.id}`} 
+          style={{ textDecoration: "none", color: "black" }} 
+          key={e.id}  // Adding key prop for each Link
+        >
+          <div className="product-card">
+            <img src={e.img} alt={`${e.Brand} ${e.Capacity}`} className="product-image" />
+            <div className="product-info">
+              <h2>{e.Brand}</h2>
+              <h2>{e.Capacity}</h2>
+              <h2>{e.Configuration}</h2>
+              <h2>{e.EnergyStar}</h2>
+              <h2>{e.Price}</h2>
+              <button className='btn btn-warning'>Add to Cart</button>
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Newmobile
+export default Newmobile;

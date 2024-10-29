@@ -24,17 +24,17 @@ function ContainerExample() {
           <Container className='one mb-4'><br /><br />
             <Row >
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/71lD7eGdW-L._SX679_.jpg" alt="" width={"300px"} height={"300px"}/>
+               <Link to={'/mobile'}> <img src="https://m.media-amazon.com/images/I/71lD7eGdW-L._SX679_.jpg" alt="" width={"300px"} height={"300px"}/></Link>
                 <h2>Samsung</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                  <img src="https://m.media-amazon.com/images/I/71XNeka-BRL._AC_UY218_.jpg" alt=""width={"290px"} height={"290px"} />
+              <Link to={'/mobile'}> <img src="https://m.media-amazon.com/images/I/71XNeka-BRL._AC_UY218_.jpg" alt=""width={"290px"} height={"290px"} /></Link>
                   <h2>One plus</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/711ZTkL0l8L._AC_UY218_.jpg" alt="" width={"290px"} height={"290px"} />
+              <Link to={'/mobile'}> <img src="https://m.media-amazon.com/images/I/711ZTkL0l8L._AC_UY218_.jpg" alt="" width={"290px"} height={"290px"} /></Link>
                 <h2>Iqoo</h2>
               </Col>
             </Row>
@@ -50,17 +50,17 @@ function ContainerExample() {
           <Container className='two mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/51+e7yrgPpL._AC_UL640_QL65_.jpg" alt="" width={"300px"} height={"300px"}/>
+              <Link to={'/earbuds'}> <img src="https://m.media-amazon.com/images/I/51+e7yrgPpL._AC_UL640_QL65_.jpg" alt="" width={"300px"} height={"300px"}/></Link>
                 <h2>Noise</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                  <img src="https://m.media-amazon.com/images/I/61Qqg+T8nsL._AC_UL320_.jpg" alt=""width={"290px"} height={"290px"} />
+              <Link to={'/earbuds'}>  <img src="https://m.media-amazon.com/images/I/61Qqg+T8nsL._AC_UL320_.jpg" alt=""width={"290px"} height={"290px"} /></Link>
                   <h2>Samsung</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/610x9ERJegL._AC_UL320_.jpg" alt="" width={"290px"} height={"290px"} />
+              <Link to={'/earbuds'}> <img src="https://m.media-amazon.com/images/I/610x9ERJegL._AC_UL320_.jpg" alt="" width={"290px"} height={"290px"} /></Link>
                 <h2>Boston</h2>
               </Col>
             </Row>
@@ -75,17 +75,17 @@ function ContainerExample() {
           <Container className='one mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg" alt="" width={"300px"} height={"300px"}/>
+              <Link to={'/laptop'}> <img src="https://m.media-amazon.com/images/I/61-Y-eWXqtL._SX569_.jpg" alt="" width={"300px"} height={"300px"}/></Link>
                 <h2>Dell</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                  <img src="https://m.media-amazon.com/images/I/71czGb00k5L._SX569_.jpg" alt=""width={"290px"} height={"290px"} />
+              <Link to={'/laptop'}>  <img src="https://m.media-amazon.com/images/I/71czGb00k5L._SX569_.jpg" alt=""width={"290px"} height={"290px"} /></Link>
                   <h2>Acer</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/61qlqvTsocL._AC_UY218_.jpg" alt="" width={"290px"} height={"290px"} />
+              <Link to={'/laptop'}> <img src="https://m.media-amazon.com/images/I/61qlqvTsocL._AC_UY218_.jpg" alt="" width={"290px"} height={"290px"} /></Link>
                 <h2>Hp</h2>
               </Col>
             </Row>
@@ -100,17 +100,17 @@ function ContainerExample() {
           <Container className='one mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/71N7mwf1C7L._AC_UY218_.jpg" alt="" width={"300px"} height={"300px"}/>
+              <Link to={'/tv'}> <img src="https://m.media-amazon.com/images/I/71N7mwf1C7L._AC_UY218_.jpg" alt="" width={"300px"} height={"300px"}/></Link>
                 <h2>TCL</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                  <img src="https://m.media-amazon.com/images/I/71ydzmWXW0L._SX569_.jpg" alt=""width={"290px"} height={"290px"} />
+              <Link to={'/tv'}>  <img src="https://m.media-amazon.com/images/I/71ydzmWXW0L._SX569_.jpg" alt=""width={"290px"} height={"290px"} /></Link>
                   <h2>LG</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/418p0EjmkhL._SY300_SX300_QL70_FMwebp_.jpg" alt="" width={"290px"} height={"290px"} />
+              <Link to={'/tv'}> <img src="https://m.media-amazon.com/images/I/418p0EjmkhL._SY300_SX300_QL70_FMwebp_.jpg" alt="" width={"290px"} height={"290px"} /></Link>
                 <h2>Sony</h2>
               </Col>
             </Row>
@@ -125,17 +125,17 @@ function ContainerExample() {
           <Container className='one mb-4'><br /><br />
             <Row>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/61hEEWSj-cL._SY879_.jpg" alt="" width={"300px"} height={"300px"}/>
+              <Link to={'/fridge'}> <img src="https://m.media-amazon.com/images/I/61hEEWSj-cL._SY879_.jpg" alt="" width={"300px"} height={"300px"}/></Link> 
                 <h2>Samsung</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                  <img src="https://m.media-amazon.com/images/I/61rnslxsZFL._SX679_.jpg" alt=""width={"290px"} height={"290px"} />
+              <Link to={'/fridge'}>  <img src="https://m.media-amazon.com/images/I/61rnslxsZFL._SX679_.jpg" alt=""width={"290px"} height={"290px"} /></Link> 
                   <h2>Haier</h2>
               </Col>
               <Col sm={1}></Col>
               <Col md={3} className='yash'>
-                <img src="https://m.media-amazon.com/images/I/61+Z57deoBL._SX679_.jpg" alt="" width={"290px"} height={"290px"} />
+              <Link to={'/fridge'}>  <img src="https://m.media-amazon.com/images/I/61+Z57deoBL._SX679_.jpg" alt="" width={"290px"} height={"290px"} /></Link> 
                 <h2>Panasonic</h2>
               </Col>
             </Row>

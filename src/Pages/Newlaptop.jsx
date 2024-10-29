@@ -1,30 +1,32 @@
-import React from 'react'
-import {Laptop} from '../Data/Laptop'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { Laptop } from '../Data/Laptop';
+import { Link } from 'react-router-dom';
+
 function Newmobile() {
   return (
-    <div>
-      {
-        Laptop.map((e)=>{
-            return(
-                <Link to={`/laptop/${e.id}`} style={{textDecoration:"none",color:"black"}}>
-                    <div className='new11'>
-                        <img src={e.Image} alt="" />
-                      </div>
-                      <div>
-                        <p>{e.Brand}</p>
-                        <p>{e.ModelName}</p>
-                        <p>{e.ScreenSize}</p>
-                        <p>{e.ColourSilver}</p>
-                        <p>{e.HardDiskSize}</p>
-                        <p>{e.Price}</p>
-                    </div>
-                </Link>
-            )
-        })
-      }
+    <div className="product-container">
+      {Laptop.map((e) => (
+        <Link 
+          to={`/laptop/${e.id}`} 
+          style={{ textDecoration: "none", color: "black" }} 
+          key={e.id}  // Adding key prop for each Link
+        >
+          <div className="product-card">
+            <img src={e.Image} alt={`${e.Brand} ${e.ModelName}`} className="product-image" />
+            <div className="product-info">
+              <h2>{e.Brand}</h2>
+              <h3>{e.ModelName}</h3>
+              <h4>{e.ScreenSize}</h4>
+              <h4>{e.ColourSilver}</h4>
+              <h4>{e.HardDiskSize}</h4>
+              <h3>{e.Price}</h3>
+              <button className='btn btn-warning'>Add to Cart</button>
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Newmobile
+export default Newmobile;

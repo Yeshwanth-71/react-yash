@@ -254,28 +254,62 @@
   justify-content: center; /* Center-aligns all items */
   padding: 20px;
 }
-
+.new img{
+  height: 500px;
+  width: 500px;
+}
 .new {
+  height: 300px;
+  width: 300px;
   display: flex;
-  gap: 10px; /* Gap between image and text inside each product */
-  width: 400px; /* Width of each product card */
-  border: 1px solid #ddd; /* Optional border for each card */
+  align-items: center;
+  margin: 10px 0;
   padding: 10px;
-  align-items: center; /* Vertically center image and text */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-.new img {
-  width: 150px; /* Adjust width for image */
-  height: auto; /* Maintain aspect ratio */
+.new:hover {
+  background-color: #f9f9f9;
 }
 
-.new div {
-  text-align: left; /* Align text to the left for a clean look */
+/* Container to hold the product items */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  gap: 20px; /* Space between items */
+  padding: 20px;
 }
 
+/* Style each product card */
+.product-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
 
-/* Add to your CSS file */
+.product-card:hover {
+  background-color: #f9f9f9;
+}
+
+/* Style for the product image */
+.product-image {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+/* Style for product information */
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .any {
     display: flex;
     flex-wrap: wrap; /* Wraps to the next line if needed */
@@ -286,8 +320,11 @@
 
 .new {
     display: flex;
-    gap: 10px; /* Gap between image and text inside each product */
-    width: 400px; /* Width of each product card */
+    flex-wrap: wrap;
+    justify-items: center;
+    gap: 10px; /* Gap between image and text in side each product */
+    height: 400px;
+    width: 600px; /* Width of each product card */
     border: 1px solid #ddd; /* Optional border for each card */
     padding: 10px;
     align-items: center; /* Vertically center image and text */
@@ -295,13 +332,54 @@
 }
 
 .new img {
-    width: 150px; /* Adjust width for image */
+    width: auto; /* Adjust width for image */
     height: auto; /* Maintain aspect ratio */
+}
+.but{
+  text-align: center;
 }
 
 .new div {
     text-align: left; /* Align text to the left for a clean look */
 }
+/* Container to hold the product items */
+
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows multiple items to fit in one row */
+  justify-content: space-around; /* Spacing between items */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column; /* Stack image and info vertically */
+  align-items: center; /* Center-align items */
+  margin: 10px; /* Space around each card */
+  padding: 15px; /* Padding inside the card */
+  border: 1px solid #ccc; /* Optional: Border for visibility */
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.2s; /* Optional: Hover effect */
+}
+
+.product-image {
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  border-radius: 5px; /* Optional: Rounded corners for images */
+}
+
+.product-info h2, 
+.product-info h3,
+.product-info h4 {
+  margin: 5px 0; /* Space between text items */
+  text-align: center; /* Center-align text */
+}
+
+.any{
+  text-align: center;
+}
+
 
 .any2 {
   display: flex;
@@ -359,7 +437,7 @@
 .container-fluid {
   height: 100%;
 }
-e */
+
 .main-content {
   margin-top: 56px; /* Adjust this value based on navbar height */
 }

@@ -12,12 +12,12 @@ function MobDet() {
     <div className='any'>
           <div>
             <img src={item.img} alt="" />
-            <p>{item.id}</p><br />
-            <p>{item.Brand}</p><br />
-            <p>{item.Capacity}</p><br />
-            <p>{item.Configuration}</p><br />
-            <p>{item.EnergyStar}</p>
-            <p>{item.Price}</p>
+            <h2>{item.Brand}</h2>
+            <h2>{item.Capacity}</h2>
+            <h2>{item.Configuration}</h2>
+            <h2>{item.EnergyStar}</h2>
+            <h2>{item.Price}</h2>
+            <button className='btn btn-warning'>Add to Cart</button>
           </div>
         </div>
   )
