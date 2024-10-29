@@ -12,6 +12,8 @@ function Mobile() {
                 <div key={index} className='new' >
                     
                     <img src={item.img} alt={item.title}  />
+
+                    
                     
                     {/* Text content section */}
                     <div>
