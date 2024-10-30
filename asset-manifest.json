@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Yeshwanth-71.io/react-yash.git/static/css/main.064e842f.css",
-    "main.js": "/Yeshwanth-71.io/react-yash.git/static/js/main.e5255b94.js",
+    "main.js": "/Yeshwanth-71.io/react-yash.git/static/js/main.affc844f.js",
     "static/js/453.fc89fcfa.chunk.js": "/Yeshwanth-71.io/react-yash.git/static/js/453.fc89fcfa.chunk.js",
     "index.html": "/Yeshwanth-71.io/react-yash.git/index.html",
     "main.064e842f.css.map": "/Yeshwanth-71.io/react-yash.git/static/css/main.064e842f.css.map",
-    "main.e5255b94.js.map": "/Yeshwanth-71.io/react-yash.git/static/js/main.e5255b94.js.map",
+    "main.affc844f.js.map": "/Yeshwanth-71.io/react-yash.git/static/js/main.affc844f.js.map",
     "453.fc89fcfa.chunk.js.map": "/Yeshwanth-71.io/react-yash.git/static/js/453.fc89fcfa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.064e842f.css",
-    "static/js/main.e5255b94.js"
+    "static/js/main.affc844f.js"
   ]
 }
