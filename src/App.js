@@ -23,7 +23,7 @@ import Tvdetails from './Pages/Details/Tvdetails'
 
 
 function App() {
-  console.log("App is rendering");
+  
   return (
     <div>
       <Router>
