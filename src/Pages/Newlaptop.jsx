@@ -19,7 +19,7 @@ function Newmobile() {
               <h4>{e.ScreenSize}</h4>
               <h4>{e.ColourSilver}</h4>
               <h4>{e.HardDiskSize}</h4>
-              <h3>{e.Price}</h3>
+              <h3>₹{e.Price}</h3>
               <button className='btn btn-warning'>Add to Cart</button>
             </div>
           </div>

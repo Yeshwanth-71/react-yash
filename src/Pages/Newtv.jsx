@@ -18,7 +18,7 @@ function Newmobile() {
               <h2>{e.DisplayTechnology}</h2>
               <h2>{e.Resolution}</h2>
               <h2>{e.RefreshRate}</h2>
-              <h2>{e.price}</h2>
+              <h2>₹{e.price}</h2>
               <button className='btn btn-warning'>Add to Cart</button>
             </div>
           </div>

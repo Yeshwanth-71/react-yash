@@ -12,7 +12,7 @@ function Newmobile() {
             <img src={e.img} alt={e.Brand} className="product-image" />
             <div className="product-info">
               <h2>{e.Brand}</h2>
-              <h2>{e.price}</h2>
+              <h2>₹{e.price}</h2>
               <button className='btn btn-warning'>Add to Cart</button>
             </div>
           </div>
