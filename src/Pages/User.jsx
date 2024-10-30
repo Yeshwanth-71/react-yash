@@ -16,7 +16,7 @@ function ContainerExample() {
         <h1>User Profile</h1></div>
         <Container>
           <Row className='luffy'>
-            <img src="https://images6.alphacoders.com/132/1325915.png" alt="" height={"300px"} width={"50px"} className='circle' />
+            <img src="" alt="" height={"300px"} width={"50px"} className='circle' />
           </Row>
         </Container>
         <Container>

@@ -14,7 +14,7 @@ import Refrigerator from './Pages/Refrigerator';
 import TV from './Pages/TV';
 import Error from './Pages/Error';
 import Nodata from './Pages/Nodata';
-import Logout from './Pages/Logout'; // Renamed to avoid conflict
+import Logout from './Pages/Logout'; 
 import Mobdetails from './Pages/Details/Mobdetails'
 import Earbuddetails from './Pages/Details/Earbuddetails'
 import Laptopdetails from './Pages/Details/Laptopdetails'
