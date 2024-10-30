@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Yeshwanth-71/react-yash.git/static/css/main.064e842f.css",
+    "main.js": "/Yeshwanth-71/react-yash.git/static/js/main.eaffa584.js",
+    "static/js/453.fc89fcfa.chunk.js": "/Yeshwanth-71/react-yash.git/static/js/453.fc89fcfa.chunk.js",
+    "index.html": "/Yeshwanth-71/react-yash.git/index.html",
+    "main.064e842f.css.map": "/Yeshwanth-71/react-yash.git/static/css/main.064e842f.css.map",
+    "main.eaffa584.js.map": "/Yeshwanth-71/react-yash.git/static/js/main.eaffa584.js.map",
+    "453.fc89fcfa.chunk.js.map": "/Yeshwanth-71/react-yash.git/static/js/453.fc89fcfa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.064e842f.css",
+    "static/js/main.eaffa584.js"
+  ]
+}
