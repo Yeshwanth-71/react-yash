@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Login from './Pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './Pages/Signup';
 import Dashboard from './Pages/Dashboard';
 import User from './Pages/User';
@@ -23,6 +23,7 @@ import Tvdetails from './Pages/Details/Tvdetails'
 
 
 function App() {
+  console.log("App is rendering");
   return (
     <div>
       <Router>
