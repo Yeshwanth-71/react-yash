@@ -61,6 +61,12 @@ function Sidenav() {
           </ul>
         )}
 
+
+        <li>
+          <NavLink to='/products'>
+            <FaUser /> Products
+          </NavLink>
+        </li>
         <li>
           <NavLink to='/user'>
             <FaUser /> User Profile

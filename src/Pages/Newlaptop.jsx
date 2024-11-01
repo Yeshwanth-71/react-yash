@@ -14,12 +14,9 @@ function Newmobile() {
           <div className="product-card">
             <img src={e.Image} alt={`${e.Brand} ${e.ModelName}`} className="product-image" />
             <div className="product-info">
-              <h2>{e.Brand}</h2>
-              <h3>{e.ModelName}</h3>
-              <h4>{e.ScreenSize}</h4>
-              <h4>{e.ColourSilver}</h4>
-              <h4>{e.HardDiskSize}</h4>
-              <h3>₹{e.Price}</h3>
+              <h2>Brand:{e.Brand}</h2>
+              <h3>Model:{e.ModelName}</h3>
+              <h3>Price:₹{e.Price}</h3>
               <button className='btn btn-warning'>Add to Cart</button>
             </div>
           </div>

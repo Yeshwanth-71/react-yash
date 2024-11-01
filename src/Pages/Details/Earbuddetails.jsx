@@ -1,6 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import {productlist} from '../../Data/Earbuds'
+import { Col, Row } from 'react-bootstrap'
+import Sidenav from '../../Components/Sidenav'
+import Header from '../../Components/Header'
 
 function MobDet() {
     const {id} = useParams();
@@ -9,14 +12,22 @@ function MobDet() {
     console.log(id)
     
   return (
-    <div className='any'>
+    <Row>
+    <Col sm={2}>
+        <Sidenav />
+    </Col>
+    <Col sm={10}>
+    <Header/>
+        <div className='any'>
           <div>
             <img src={item.img} alt=""  height={"400px"}  />
-            <h2>{item.price}</h2>
-            <h2>₹{item.Brand}</h2>
+            <h2>Brand:{item.Brand}</h2>
+            <h2>Price:₹{item.price}</h2>
           <button className='btn btn-warning'>Add to Cart</button>
           </div>
         </div>
+      </Col>
+      </Row>
   )
 }
 

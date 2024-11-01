@@ -20,6 +20,7 @@ import Earbuddetails from './Pages/Details/Earbuddetails'
 import Laptopdetails from './Pages/Details/Laptopdetails'
 import Fridgedetails from './Pages/Details/Fridgedetails'
 import Tvdetails from './Pages/Details/Tvdetails'
+import Products from './Pages/Products'
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path='/laptop/:id' element={<Laptopdetails />} />
           <Route path='/fridge/:id' element={<Fridgedetails />} />
           <Route path='/tv/:id' element={<Tvdetails />} />
+          <Route path='/products' element={<Products />} />
           
         </Routes>
       </Router>

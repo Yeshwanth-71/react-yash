@@ -7,6 +7,12 @@
   overflow: hidden;
   background-color: #ED4674;
 }
+
+.reddy{
+  text-align: center;
+  background-color: greenyellow;
+  height: 100vh;
+}
 .card {
   padding: 30px;
   background-color: #2C2C72;
@@ -253,6 +259,7 @@
   gap: 20px; /* Small gap between product cards */
   justify-content: center; /* Center-aligns all items */
   padding: 20px;
+  margin-top: 50px;
 }
 .new img{
   height: 500px;
