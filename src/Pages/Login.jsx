@@ -34,7 +34,7 @@ function Login() {
             onChange={(e) => setUsername(e.target.value)}
           />
           <br /><br />
-          <label for="">Password:(Hint:1234)</label><br />
+          <label for="">Password:(Hint:reddy123)</label><br />
           <input
             type="password"
             placeholder="Enter Password"

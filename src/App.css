@@ -5,7 +5,7 @@
   align-items: center;
   height: 100vh;
   overflow: hidden;
-  background-color: #ED4674;
+  background-color: blue;
 }
 
 .reddy{
@@ -34,10 +34,10 @@
 /* styles.css */
 .sidenav {
   height: 100vh; /* Full height */
-  width: 250px; /* Fixed width */
+  width: 300px; /* Fixed width */
   position: fixed; /* Fixed position */
   left: -250px; /* Hidden off-screen */
-  top: 0; /* Align to the top */
+  top: 1; /* Align to the top */
   background-color: #343a40; /* Dark background */
   color: white; /* Text color */
   transition: left 0.3s ease; /* Smooth transition */
