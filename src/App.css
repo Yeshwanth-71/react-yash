@@ -32,49 +32,84 @@
   border-bottom: 2px solid black;
 }
 /* styles.css */
+
+/* src/Components/Sidenav.css */
+
 .sidenav {
-  height: 100vh; /* Full height */
-  width: 300px; /* Fixed width */
-  position: fixed; /* Fixed position */
-  left: -250px; /* Hidden off-screen */
-  top: 1; /* Align to the top */
-  background-color: #343a40; /* Dark background */
-  color: white; /* Text color */
-  transition: left 0.3s ease; /* Smooth transition */
-  padding: 20px; /* Padding */
-  z-index: 1000; /* Above other elements */
-}
-
-.sidenav.open {
-  left: 0; /* Slide in when open */
-}
-
-.nav-items {
-  list-style-type: none; /* Remove list bullets */
-  padding: 0; /* No padding */
-}
-
-.nav-items li {
-  margin: 15px 0; /* Margin for list items */
-}
-
-.nav-items a {
-  color: #ffffff; /* Link color */
-  text-decoration: none; /* No underline */
-  display: flex; /* Flexbox for icons */
-  align-items: center; /* Center icons vertically */
-}
-
-.nav-items a:hover {
-  background-color: #007bff; /* Hover color */
-  border-radius: 4px; /* Rounded corners */
-  padding: 10px; /* Padding on hover */
+  width: 250px;
+  position: fixed;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #343a40;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Hide sidenav by default */
 }
 
 .sidenav-heading {
-  font-size: 1.5rem; /* Larger heading */
-  margin-bottom: 20px; /* Space below heading */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-items li {
+  margin: 0.5rem 0;
+}
+
+.nav-items a, .nav-items h5 {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nav-items a:hover, .nav-items h5:hover {
+  color: #00a8e1;
+}
+
+.dropdown-item {
+  padding-left: 1.5rem;
+}
+
+.nav-items h5 {
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 1rem;
+}
+
+/* Mobile Styles */
+.sidenav-toggle {
+  position: absolute;
+  margin-top: 50px;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
+/* Show sidenav on mobile when open */
+.sidenav.open {
+  transform: translateX(0);
+}
+
+/* Display sidenav on larger screens by default */
+@media (min-width: 768px) {
+  .sidenav {
+    transform: translateX(0);
+  }
+  .sidenav-toggle {
+    display: none;
+  }
+}
+
+
+
 /* styles.css */
 @keyframes fadeIn {
   from {
