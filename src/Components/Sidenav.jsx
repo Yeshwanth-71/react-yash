@@ -7,7 +7,7 @@ import { BsEarbuds } from "react-icons/bs";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { IoMdMenu } from "react-icons/io";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Sidenav.css';
+
 
 function Sidenav() {
   const [showCategories, setShowCategories] = useState(false);
