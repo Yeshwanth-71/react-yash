@@ -79,49 +79,80 @@ body{
   border-bottom: 2px solid black;
 }
 /* styles.css */
+/* Base Sidenav Styling */
 .sidenav {
-  height: 100vh; /* Full height */
-  width: 300px; /* Fixed width */
-  position: fixed; /* Fixed position */
-  left: -250px; /* Hidden off-screen */
-  top: 1; /* Align to the top */
-  background-color: #343a40; /* Dark background */
-  color: white; /* Text color */
-  transition: left 0.3s ease; /* Smooth transition */
-  padding: 20px; /* Padding */
-  z-index: 1000; /* Above other elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Hidden by default on mobile */
+  z-index: 1050;
 }
 
 .sidenav.open {
-  left: 0; /* Slide in when open */
+  transform: translateX(0); /* Show sidenav */
 }
 
-.nav-items {
-  list-style-type: none; /* Remove list bullets */
-  padding: 0; /* No padding */
+.sidenav .nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-items li {
-  margin: 15px 0; /* Margin for list items */
+.sidenav .nav-items li {
+  margin: 15px 0;
 }
 
-.nav-items a {
-  color: #ffffff; /* Link color */
-  text-decoration: none; /* No underline */
-  display: flex; /* Flexbox for icons */
-  align-items: center; /* Center icons vertically */
+.sidenav .nav-items a,
+.sidenav .nav-items h5 {
+  color: #f8f9fa;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
 }
 
-.nav-items a:hover {
-  background-color: #007bff; /* Hover color */
-  border-radius: 4px; /* Rounded corners */
-  padding: 10px; /* Padding on hover */
+.sidenav .nav-items a:hover,
+.sidenav .nav-items h5:hover {
+  color: #007bff;
 }
 
 .sidenav-heading {
-  font-size: 1.5rem; /* Larger heading */
-  margin-bottom: 20px; /* Space below heading */
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
+
+/* Mobile-specific Styles */
+.sidenav-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Desktop-specific Styles */
+@media (min-width: 768px) {
+  .sidenav {
+    transform: translateX(0); /* Always visible on desktop */
+  }
+  .sidenav-toggle {
+    display: none; /* Hide toggle button on desktop */
+  }
+}
+
+
 /* styles.css */
 @keyframes fadeIn {
   from {

@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { MdSpaceDashboard, MdError } from "react-icons/md";
 import { FaMobileAlt, FaTv, FaGithub, FaUser } from "react-icons/fa";
-import { IoMdLaptop, IoMdSettings } from "react-icons/io";
+import { IoMdLaptop, IoMdSettings, IoMdMenu, IoMdClose } from "react-icons/io";
 import { BsEarbuds } from "react-icons/bs";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
-import { IoMdMenu } from "react-icons/io";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function Sidenav() {
   const [showCategories, setShowCategories] = useState(false);
@@ -20,7 +18,7 @@ function Sidenav() {
     <>
       {/* Mobile Toggle Button */}
       <button className="sidenav-toggle btn btn-dark d-md-none" onClick={toggleSidenav}>
-        <IoMdMenu size={24} /> Menu
+        {isOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
       </button>
 
       {/* Sidenav */}
