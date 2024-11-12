@@ -31,67 +31,110 @@
 .Signup input{
   border-bottom: 2px solid black;
 }
-/* styles.css */
-
-/* src/Components/Sidenav.css */
 
 .sidenav {
-  width: 250px;
-  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 100vh;
-  padding: 1rem;
+  width: 250px; /* Sidebar width */
   background-color: #343a40;
-  color: #ffffff;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%); /* Hide sidenav by default */
+  color: white;
+  padding: 1rem 0;
+  position: fixed; /* Fixed position for the sidebar */
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease; /* Animation for opening/closing */
 }
 
+/* Sidenav Heading */
 .sidenav-heading {
+  text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
+/* Nav Items */
 .nav-items {
   list-style: none;
   padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .nav-items li {
-  margin: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
 }
 
-.nav-items a, .nav-items h5 {
-  color: #ffffff;
+.nav-items li a {
+  color: white;
   text-decoration: none;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  justify-content: center;
+  padding: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-items a:hover, .nav-items h5:hover {
-  color: #00a8e1;
+.nav-items li a:hover {
+  background-color: #007bff;
+  transform: translateX(10px);
 }
 
-.dropdown-item {
-  padding-left: 1.5rem;
+/* Dropdown Items */
+.nav-dropdown .dropdown-item {
+  background-color: #343a40 !important;
+  color: white !important;
+  transition: background-color 0.3s ease;
 }
 
-.nav-items h5 {
+.nav-dropdown .dropdown-item:hover {
+  background-color: whitesmoke;
+}
+
+/* Logout Button */
+.logout-button button {
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Hamburger Menu (Mobile) */
+.sidenav-toggle {
+  display: none;
+  position: absolute;
+  top: 15px;
+  margin-top: 40px;
+  z-index: 1000;
+  background-color: #343a40;
+  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.btn {
-  margin-top: 1rem;
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
+  .sidenav {
+    transform: translateX(-100%); /* Hide sidebar on mobile by default */
+  }
+
+  .sidenav.open {
+    transform: translateX(0); /* Show sidebar when it's open */
+  }
+
+  .sidenav-toggle {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  .nav-items li {
+    margin-bottom: 1rem;
+  }
 }
 
-/* Mobile Styles */
-.sidenav-toggle {
-  position: absolute;
-  margin-top: 50px;
-  top: 1rem;
-  left: 1rem;
-  z-index: 1000;
-}
 
 /* Show sidenav on mobile when open */
 .sidenav.open {
@@ -110,54 +153,6 @@
 
 
 
-/* styles.css */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px); /* Start a bit higher */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Final position */
-  }
-}
-
-.nav-items li {
-  opacity: 0; /* Start with hidden */
-  animation: fadeIn 0.5s forwards; /* Fade in animation */
-}
-
-/* Apply delay for each item */
-.nav-items li:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.nav-items li:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.nav-items li:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.nav-items li:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.nav-items li:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.nav-items li:nth-child(6) {
-  animation-delay: 0.6s;
-}
-.nav-items li:nth-child(7) {
-  animation-delay: 0.7s;
-}
-.nav-items li:nth-child(8) {
-  animation-delay: 0.8s;
-}
-.nav-items li:nth-child(9) {
-  animation-delay: 0.9s;
-}
-.nav-items li:nth-child(10) {
-  animation-delay: 1.0s;
-}
 
 
 .logout-heading {
@@ -191,35 +186,10 @@
   align-items: center; /* Vertically center align icons and text */
 }
 
-/* Default styles for sidenav items */
-.nav-items li a {
-  color: #ffffff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 10px; /* Keep padding consistent */
-  border-radius: 4px;
-  transition: background-color 0.3s; /* Smooth transition for color */
-}
 
-/* Hover effect without layout shift */
-.nav-items li a:hover {
-  background-color: #495057;
-  color: #ffffff; /* Optional: ensure color remains visible on hover */
-}
 
-.nav-items li a svg {
-  margin-right: 10px; /* Space between icon and text */
-}
 
-.active {
-  font-weight: bold;
-  text-align: center;
-}
-.nav-dropdown-gap {
-  margin-right: 40px; /* Adjust as needed */
-}
+
 .Nodata{
   text-align: center;
   margin-top: 100px;
@@ -259,17 +229,6 @@
 .main-layout {
   display: flex;
   height: 100vh;
-}
-
-.sidenav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: #343a40;
-  padding: 20px;
-  overflow-y: auto; /* Sidebar should scroll if its content overflows */
 }
 .sidenav {
   margin-top: 56px; /* Adjust based on the height of your navbar */

@@ -1,66 +1,75 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { MdSpaceDashboard, MdError } from "react-icons/md";
-import { FaMobileAlt, FaTv, FaGithub, FaUser } from "react-icons/fa";
-import { IoMdLaptop, IoMdSettings } from "react-icons/io";
-import { BsEarbuds } from "react-icons/bs";
-import { CgSmartHomeRefrigerator } from "react-icons/cg";
-import { IoMdMenu } from "react-icons/io";
+import { FaMobileAlt, FaTv, FaProductHunt, FaUser } from "react-icons/fa";
+import { IoMdLaptop } from "react-icons/io";
+import { BsEarbuds } from "react-icons/bs";  
+import { BiSolidFridge } from "react-icons/bi";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Sidenav() {
-  const [showCategories, setShowCategories] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // State for mobile toggle
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleCategories = () => setShowCategories(!showCategories);
-  const toggleSidenav = () => setIsOpen(!isOpen); // Toggle sidenav on mobile
+  // Toggle the sidenav visibility on mobile
+  const toggleSidenav = () => setIsOpen(!isOpen);
 
   return (
     <>
-     <br /><br />
+      {/* Hamburger Menu (Mobile View) */}
       <button className="sidenav-toggle btn btn-dark d-md-none" onClick={toggleSidenav}>
-        <IoMdMenu size={24} /> Menu
+        {isOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
       </button>
 
-      {/* Sidenav */}
-      <nav className={`sidenav bg-dark text-light ${isOpen ? 'open' : ''}`}>
-        <h2 className='sidenav-heading'>Menu</h2><br />
+      {/* Sidebar Navigation */}
+      <nav className={`sidenav ${isOpen ? 'open' : ''}`}>
+        <h2 className="sidenav-heading mt-3">Menu</h2>
         <ul className="nav-items">
-          <li>
-            <NavLink to='/dashboard' onClick={() => setIsOpen(false)}>
+          <li className="mb-5 mt-5">
+            <NavLink to="/dashboard" style={{ textDecoration: "none", color: "white" }}>
               <MdSpaceDashboard /> Dashboard
             </NavLink>
           </li>
-          <li>
-            <h5 className='text-light' onClick={toggleCategories} style={{ cursor: 'pointer' }}>
-              <IoMdMenu /> Categories
-            </h5>
+          <li className="mb-5">
+            <NavDropdown title="Categories" id="basic-nav-dropdown" className="nav-dropdown">
+              <NavDropdown.Item as={Link} to="/mobile">
+                <FaMobileAlt /> Mobile
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/earbuds">
+                <BsEarbuds /> Earbuds
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/laptop">
+                <IoMdLaptop /> Laptop
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/tv">
+                <FaTv /> TV's
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/refrigerators">
+                <BiSolidFridge /> Refrigerators
+              </NavDropdown.Item>
+            </NavDropdown>
           </li>
-          {showCategories && (
-            <ul className="nav flex-column ml-3">
-              <li><NavLink to='/mobile' className="dropdown-item" onClick={() => setIsOpen(false)}><FaMobileAlt /> Mobiles</NavLink></li>
-              <li><NavLink to='/earbuds' className="dropdown-item" onClick={() => setIsOpen(false)}><BsEarbuds /> Earbuds</NavLink></li>
-              <li><NavLink to='/laptop' className="dropdown-item" onClick={() => setIsOpen(false)}><IoMdLaptop /> Laptop</NavLink></li>
-              <li><NavLink to='/tv' className="dropdown-item" onClick={() => setIsOpen(false)}><FaTv /> TV</NavLink></li>
-              <li><NavLink to='/fridge' className="dropdown-item" onClick={() => setIsOpen(false)}><CgSmartHomeRefrigerator /> Refrigerator</NavLink></li>
-            </ul>
-          )}
-          <li><NavLink to='/products' onClick={() => setIsOpen(false)}><FaUser /> Products</NavLink></li>
-          <li><NavLink to='/user' onClick={() => setIsOpen(false)}><FaUser /> User Profile</NavLink></li>
-          <li><NavLink to='/error' onClick={() => setIsOpen(false)}><MdError /> Error</NavLink></li>
-          <li><NavLink to='/settings' onClick={() => setIsOpen(false)}><IoMdSettings /> Settings</NavLink></li>
-          <li>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="nav-link">
-              <FaGithub /> GitHub
-            </a>
+          <li className="mb-5">
+            <NavLink to="/products" style={{ textDecoration: "none", color: "white" }}>
+              <FaProductHunt /> Products
+            </NavLink>
+          </li>
+          <li className="mb-5">
+            <NavLink to="/error" style={{ textDecoration: "none", color: "white" }}>
+              <MdError /> Error
+            </NavLink>
+          </li>
+          <li className="mb-5">
+            <NavLink to="/user-profile" style={{ textDecoration: "none", color: "white" }}>
+              <FaUser /> User Profile
+            </NavLink>
           </li>
         </ul>
-        <Link to='/'>
-          <center>
-            <button className='btn btn-primary btn-lg' aria-label="Logout">
-              Logout
-            </button>
-          </center>
+        <Link to="/" className="logout-button">
+          <button className="btn btn-primary btn-lg" aria-label="Logout">
+            Logout
+          </button>
         </Link>
       </nav>
     </>
