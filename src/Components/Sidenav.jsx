@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { MdSpaceDashboard, MdError } from "react-icons/md";
-<<<<<<< HEAD
 import { FaMobileAlt, FaTv, FaProductHunt, FaUser } from "react-icons/fa";
 import { IoMdLaptop } from "react-icons/io";
 import { BsEarbuds } from "react-icons/bs";  
 import { BiSolidFridge } from "react-icons/bi";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import NavDropdown from 'react-bootstrap/NavDropdown';
-=======
 import { FaMobileAlt, FaTv, FaGithub, FaUser } from "react-icons/fa";
 import { IoMdLaptop, IoMdSettings, IoMdMenu, IoMdClose } from "react-icons/io";
 import { BsEarbuds } from "react-icons/bs";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
->>>>>>> 36390744f35417794ac90887281335c34eaaf9b5
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Sidenav() {
